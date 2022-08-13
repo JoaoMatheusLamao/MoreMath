@@ -1,0 +1,43 @@
+body{
+    background-image: url(img/background-login_e_cadastrar.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.main{
+    background-color: red;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadro{
+    background-color: blue;
+    width: 40%;
+    flex-direction: column;
+}
+
+.tit_1{
+    background-color: yellow;
+}
+
+.titulo_texto_cadastrar{
+    background-color: green;
+    text-align: center;
+}
+
+.dados_usuario input{
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin: 10px;
+}
+.dados_usuario label{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
