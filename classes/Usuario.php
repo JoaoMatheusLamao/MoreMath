@@ -115,6 +115,8 @@ class Usuario
                 }
             }
         }
+
+        //cancatenando todos os erros
         if (!empty($this->logErros)) {
             foreach ($this->logErros as $erros) {
                 foreach ($erros as $codErro => $value) {

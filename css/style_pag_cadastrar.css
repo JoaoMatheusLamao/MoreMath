@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
 body{
     background-image: url(img/background-login_e_cadastrar.png);
     background-size: 100%;
@@ -15,8 +21,9 @@ body{
 
 .quadro{
     background-color: rgba(0, 0, 255, 0.349);
-    width: 40%;
+    width: 50%;
     flex-direction: column;
+    font-family: athiti;
 }
 
 .tit_1{
@@ -29,9 +36,19 @@ body{
 }
 
 .dados_usuario{
+    background-color: rgba(255, 255, 0, 0.596);
+    background-size: 100%;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-family: athiti;
+}
+
+.dados_usuario form{
+    width: 90%;
+    margin: 10px;
 }
 
 .dados_usuario input{

@@ -27,37 +27,6 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se no MoreMath</title>
-    <script>
-        function mascaraTelefone(event) {
-            let tecla = event.key;
-            let telefone = event.target.value.replace(/\D+/g, "");
-
-            if (/^[0-9]$/i.test(tecla)) {
-                telefone = telefone + tecla;
-                let tamanho = telefone.length;
-
-                if (tamanho >= 12) {
-                    return false;
-                }
-
-                if (tamanho > 10) {
-                    telefone = telefone.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
-                } else if (tamanho > 5) {
-                    telefone = telefone.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
-                } else if (tamanho > 2) {
-                    telefone = telefone.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
-                } else {
-                    telefone = telefone.replace(/^(\d*)/, "($1");
-                }
-
-                event.target.value = telefone;
-            }
-
-            if (!["Backspace", "Delete"].includes(tecla)) {
-                return false;
-            }
-        }
-    </script>
 
     <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
 </head>
@@ -99,9 +68,8 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                 <p><a href="index.php">Já tenho um cadastro</a></p>
             </div>
         </div>
-
-
     </div>
+    <script type="text/javascript" src="js/js_cadastrar.js"></script>
 
 </body>
 
