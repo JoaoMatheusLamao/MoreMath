@@ -62,7 +62,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
 </head>
 
-<body >
+<body>
     <div class="main">
         <div class="quadro">
             <div class="Tit_1">
@@ -70,18 +70,30 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
             </div>
             <div class="dados_usuario">
                 <form method="post">
-                    <label for="nome_usuario">Nome: </label>
-                    <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Digite seu nome" required> <br>
-                    <label for="telefone">Telefone:</label>
-                    <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999" onkeydown="return mascaraTelefone(event)" required><br>
-                    <label for="data_nascimento">Data de nascimento:</label>
-                    <input type="date" name="dataNascimento" id="dataNascimento" required><br>
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu melhor email!" required><br>
-                    <label for="email">Senha:</label>
-                    <input type="password" name="senha" id="senha" required><br>
-                    <label for="email">Confirme sua senha:</label>
-                    <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
+                    <div class="label_input">
+                        <label for="nome_usuario">Nome:</label>
+                        <input type="text" name="nomeUsuario" id="nomeUsuario" placeholder="Digite seu nome" required> <br>
+                    </div>
+                    <div class="label_input">
+                        <label for="telefone">Telefone:</label>
+                        <input type="text" name="telefone" id="telefone" placeholder="(99) 99999-9999" onkeydown="return mascaraTelefone(event)" required><br>
+                    </div>
+                    <div class="label_input">
+                        <label for="data_nascimento">Data de nascimento:</label>
+                        <input type="date" name="dataNascimento" id="dataNascimento" required><br>
+                    </div>
+                    <div class="label_input">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email" placeholder="Digite seu melhor email!" required><br>
+                    </div>
+                    <div class="label_input">
+                        <label for="email">Senha:</label>
+                        <input type="password" name="senha" id="senha" required><br>
+                    </div>
+                    <div class="label_input">
+                        <label for="email">Confirme sua senha:</label>
+                        <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
+                    </div>
                     <button type="submit">Cadastrar</button>
                 </form>
                 <p><a href="index.php">Já tenho um cadastro</a></p>
