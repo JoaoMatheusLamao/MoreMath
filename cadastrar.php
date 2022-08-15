@@ -35,7 +35,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     <div class="main">
         <div class="quadro">
             <div class="Tit_1">
-                <h1 class="titulo_texto_cadastrar">Realizar cadastro</h1>
+                <h1 class="titulo_texto_cadastrar">Cadastre-se</h1>
             </div>
             <div class="dados_usuario">
                 <form method="post">
