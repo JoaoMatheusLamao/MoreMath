@@ -5,14 +5,14 @@
     padding: 0;
 }
 body{
-    background-image: url(img/background-login_e_cadastrar.png);
+    background-image: url(img/Tela_Cadastro/background_cadastro_login.png);
     background-size: 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
 
 .main{
-    background-color: rgba(255, 0, 0, 0.39);
+    background-color: rgba(60, 255, 0, 0.39);
     display: flex;
     width: 100%;
     align-items: center;

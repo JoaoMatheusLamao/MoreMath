@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url(img/Tela_Cadastro/background_cadastro_login.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.main{
+
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.quadro{ 
+    background-image: url(img/Tela_Cadastro/quadro.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 55%;
+    background-position-x: 60%;
+    background-origin: padding-box;
+    width: 100%;
+    flex-direction: column;
+    font-family: athiti;    
+    justify-content: center;
+}
+
+.tit_1{
+
+}
+
+.titulo_texto_cadastrar{
+
+    text-align: center;
+}
+
+.dados_usuario{
+    margin-left: 28%;
+    margin-bottom: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: athiti;
+    width: 40%;
+}
+
+.dados_usuario form{
+    width: 90%;
+    margin: 10px;
+}
+
+.dados_usuario input{
+    background-color: rgb(223, 223, 223);
+    height: 30px;
+    border-style: none;
+    border-radius: 10px;
+    padding-left: 5px;
+    margin: 10px;
+}
+.dados_usuario label{
+    font-size: 25px;
+    color: aliceblue;
+    font-weight: bold;
+}
+
