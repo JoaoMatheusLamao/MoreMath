@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap');
+
 *{
     margin: 0;
     padding: 0;
+    font-family: 'DynaPuff', cursive;
 }
 body{
-    background-image: url(img/Tela_Cadastro/background_cadastro_login.png);
+    background-image: url(img/Tela_Cadastro/background-login_e_cadastrar.jpg);
     background-size: 100%;
+    background-position-y: 18%;
     background-attachment: fixed;
     background-repeat: no-repeat;
 }
@@ -18,28 +23,24 @@ body{
 }
 
 .quadro{ 
-    background-image: url(img/Tela_Cadastro/quadro.png);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: 55%;
-    background-position-x: 60%;
-    background-origin: padding-box;
     width: 100%;
-    padding-top: 15px;
+    padding-top: 35px;
     flex-direction: column;
     justify-content: center;
     font-family: athiti;    
 }
 
 .titulo_texto_cadastrar{
-    text-align: center;
-    font-weight: 700;
-    font-size: 38px;
+    padding-left: 30%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 40px;    
+    color: aliceblue;
+    font-family: 'DynaPuff', cursive;
 }
 
 .dados_usuario{
-    margin-left: 28%;
-    margin-bottom: 10%;
+    margin-left: 25%;
     width: 40%;
     display: flex;
     flex-direction: column;
@@ -54,25 +55,25 @@ body{
 }
 
 .dados_usuario label{
-    font-size: 25px;
+    font-size: 130%;
     color: aliceblue;
-    font-weight: 600;
+    font-weight: 300;
 }
 
 .dados_usuario input{
-    background-color: transparent;
-    color: rgb(223, 223, 223);
+    color: rgb(0, 0, 0);
     height: 30px;
     border-style: none;
-    border-bottom-style: dotted;
-    border-color: white;
+    border-bottom-style: double;
+    border-color: rgb(0, 0, 0);
     border-radius: 10px;
+    background-color: rgb(226, 251, 211);
     padding-left: 5px;
     margin: 10px;
 }
 
 .dados_usuario input::placeholder{
-    color: rgb(223, 223, 223);
+    color: black;
     font-family: athiti;
     text-align: right;
     margin-left: 7px;
@@ -80,10 +81,43 @@ body{
 }
 
 .dados_usuario input:focus{
-    background-color: transparent;
+    background-color: white;
     border-radius: 10px;
+}
+.bt_volta_login{
+    text-decoration: none;
+    color: rgb(0, 153, 255);
+}
+
+.logo{
+    display: flex;
+    background-image: url(img/Logo.png);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 400px;
+    margin-left: 58%;
+    margin-top: -20%;
+}
+
+#voltar{
+    color: rgb(255, 255, 255);
+}
+
+#voltar :hover{
+    background-color: rgb(167, 236, 156);
+    padding-left: 30px;
+    padding-right: 30px;
+    color: rgb(255, 255, 255);
+    border-radius: 25px;
+    font-size: 130%;
 }
 
 #email{
     width: 50%;
 }
+
+#bt_cadastra{
+
+}
+
