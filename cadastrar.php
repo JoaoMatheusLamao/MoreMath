@@ -8,12 +8,18 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     $senha = Usuario::limpaPost($_POST['senha']);
     $confirmaSenha = Usuario::limpaPost($_POST['confirmaSenha']);
 
+    unset($errinhos);
+
     $objUsu = new Usuario($nome, $email, $senha, $confirmaSenha, $telefone, $dataNasc);
     $objUsu->validarCadastro();
     if (empty($objUsu->errosFomr)) {
         $objUsu->cadastrar();
         $errinhos = $objUsu->trataErroCadastro();
-        header('location: index.php');
+        if (!empty($errinhos)) {
+            header('location: index.php');
+        } else {
+            var_dump($errinhos);
+        }
         //$errinhos[codErro][value]
     }
 }
@@ -21,7 +27,6 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +68,13 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                         <label for="email">Confirme sua senha:</label>
                         <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
                     </div>
+
                     <button type="submit" id="bt_cadastra">Cadastrar</button>
+
+                    <div class="label_input">
+                        <label>  </label>
+                    </div>
+
                 </form>
                 <p id="voltar"><a href="index.php" class="bt_volta_login">Já tenho um cadastro</a></p>
             </div>
