@@ -28,7 +28,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se no MoreMath</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style_cadastrar.css">
+    <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
 </head>
 
 <body>
@@ -65,7 +65,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                     </div>
                     <button type="submit">Cadastrar</button>
                 </form>
-                <p><a href="index.php">Já tenho um cadastro</a></p>
+                <p id="voltar"><a href="index.php" class="bt_volta_login">Já tenho um cadastro</a></p>
             </div>
         </div>
     </div>
