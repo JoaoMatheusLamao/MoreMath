@@ -8,12 +8,18 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     $senha = Usuario::limpaPost($_POST['senha']);
     $confirmaSenha = Usuario::limpaPost($_POST['confirmaSenha']);
 
+    unset($errinhos);
+
     $objUsu = new Usuario($nome, $email, $senha, $confirmaSenha, $telefone, $dataNasc);
     $objUsu->validarCadastro();
     if (empty($objUsu->errosFomr)) {
         $objUsu->cadastrar();
         $errinhos = $objUsu->trataErroCadastro();
-        header('location: index.php');
+        if (!empty($errinhos)) {
+            header('location: index.php');
+        } else {
+            var_dump($errinhos);
+        }
         //$errinhos[codErro][value]
     }
 }
@@ -21,17 +27,17 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastre-se no MoreMath</title>
-
-    <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
-</head>
-
-<body>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cadastre-se no MoreMath</title>
+        
+        <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
+    </head>
+    
+    <body>
     <div class="main">
         <div class="quadro">
             <div class="Tit_1">
@@ -62,6 +68,9 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                     <div class="label_input">
                         <label for="email">Confirme sua senha:</label>
                         <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
+                    </div>
+                    <div class="label_input">
+                        <label>  </label>
                     </div>
                     <button type="submit">Cadastrar</button>
                 </form>
