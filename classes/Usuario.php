@@ -117,7 +117,7 @@ class Usuario
         }
 
         //cancatenando todos os erros
-        unset($this->logEr);
+        //unset($this->logEr);
         if (!empty($this->logErros)) {
             foreach ($this->logErros as $erros) {
                 foreach ($erros as $codErro => $value) {
