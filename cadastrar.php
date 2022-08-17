@@ -7,13 +7,19 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     $dataNasc = Usuario::limpaPost($_POST['dataNascimento']);
     $senha = Usuario::limpaPost($_POST['senha']);
     $confirmaSenha = Usuario::limpaPost($_POST['confirmaSenha']);
-
+    
+    
     $objUsu = new Usuario($nome, $email, $senha, $confirmaSenha, $telefone, $dataNasc);
     $objUsu->validarCadastro();
+    
     if (empty($objUsu->errosFomr)) {
         $objUsu->cadastrar();
+        //if(isset($errinhos)){unset($errinhos['value']);}
         $errinhos = $objUsu->trataErroCadastro();
-        header('location: index.php');
+        echo $errinhos['value'];
+        if (empty($errinhos)) {
+            header('location: index.php');
+        }
         //$errinhos[codErro][value]
     }
 }
@@ -21,21 +27,20 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
 
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se no MoreMath</title>
 
-    <link rel="stylesheet" type="text/css" href="css/style_pag_cadastrar.css">
+    <link rel="stylesheet" type="text/css" href="css/style_pag_cad.css">
 </head>
 
 <body>
     <div class="main">
         <div class="quadro">
             <div class="Tit_1">
-                <h1 class="titulo_texto_cadastrar">Realizar cadastro</h1>
+                <h1 class="titulo_texto_cadastrar">Cadastre-se</h1>
             </div>
             <div class="dados_usuario">
                 <form method="post">
@@ -63,10 +68,16 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                         <label for="email">Confirme sua senha:</label>
                         <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
                     </div>
-                    <button type="submit">Cadastrar</button>
+
+                    <div class="label_input">
+                        <label class="label_erro" <?php //if (!empty($errinhos)){echo 'id="erro"';}else{echo "";}?>><?php //if (!empty($errinhos)){echo $errinhos['value'];}?></label>
+                    </div>
+
+                    <div class="logo"><button type="submit" id="bt_cadastra">Cadastrar</button></div>
+
                 </form>
-                <p><a href="index.php">Já tenho um cadastro</a></p>
-            </div>
+                <p id="voltar"><a href="index.php" class="bt_volta_login">Já tenho um cadastro</a></p>
+            </div> 
         </div>
     </div>
     <script type="text/javascript" src="js/js_cadastrar.js"></script>

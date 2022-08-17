@@ -19,7 +19,8 @@ class Logar
         $usuarios = $objSql->exComand("select*from login_usuario where email = :email and senha = :senha", array(':email' => $this->email, ':senha' => $this->senha));
         if ($usuarios) {
             session_start();
-            var_dump($_SESSION['id']);
+            
+            //var_dump($_SESSION['id']);
             echo "login ok";
 
         } else {

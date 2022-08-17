@@ -35,19 +35,19 @@ class Usuario
     public function validarCadastro()
     {
         try {
-            //VALIDAÇÃO DO NOME
+            //valida nome
             if (!preg_match("/^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/", $this->nome)) {
                 throw new Exception("Por favor, informe um nome válido!", 1);
             }
-            //VERIFICAR SE EMAIL É VÁLIDO
+            //valida email
             if (!filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
                 throw new Exception("Por favor, informe um email válido!", 2);
             }
-            //VERIFICAR SE SENHA TEM MAIS DE 6 DÍGITOS
+            //valida senha
             if (strlen($this->senha) < 6) {
                 throw new Exception("Senha deve ter 6 caracteres ou mais!", 3);
             }
-            //verificar repetição de senha
+            //valida repete senha
             if ($this->senha !== $this->confirmaSenha) {
                 throw new Exception("Senha e confirmação de senha não coincidem!", 4);
             }
@@ -117,6 +117,7 @@ class Usuario
         }
 
         //cancatenando todos os erros
+        unset($this->logEr);
         if (!empty($this->logErros)) {
             foreach ($this->logErros as $erros) {
                 foreach ($erros as $codErro => $value) {
