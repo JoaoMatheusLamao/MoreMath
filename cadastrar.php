@@ -1,27 +1,30 @@
 <?php
 require_once("config.php");
-if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['email']) && isset($_POST['dataNascimento']) && isset($_POST['senha']) && isset($_POST['confirmaSenha']) && !empty($_POST['nomeUsuario']) && !empty($_POST['telefone']) && !empty($_POST['email']) && !empty($_POST['dataNascimento']) && !empty($_POST['senha']) && !empty($_POST['confirmaSenha'])) {
+
+if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['email']) && isset($_POST['dataNascimento']) && isset($_POST['senha']) && isset($_POST['confirmaSenha'])) {
     $nome = Usuario::limpaPost($_POST['nomeUsuario']);
     $telefone = Usuario::limpaPost($_POST['telefone']);
     $email = Usuario::limpaPost($_POST['email']);
     $dataNasc = Usuario::limpaPost($_POST['dataNascimento']);
     $senha = Usuario::limpaPost($_POST['senha']);
     $confirmaSenha = Usuario::limpaPost($_POST['confirmaSenha']);
-    
+
+    if (!empty($nome) && !empty($telefone) && !empty($email) && !empty($dataNasc) && !empty($senha) && !empty($confirmaSenha)){
     
     $objUsu = new Usuario($nome, $email, $senha, $confirmaSenha, $telefone, $dataNasc);
     $objUsu->validarCadastro();
     
-    if (empty($objUsu->errosFomr)) {
+    $errinhos = $objUsu->trataErroCadastro();
+    if (empty($errinhos)) {
         $objUsu->cadastrar();
         //if(isset($errinhos)){unset($errinhos['value']);}
-        $errinhos = $objUsu->trataErroCadastro();
-        echo $errinhos['value'];
+        var_dump($errinhos);
         if (empty($errinhos)) {
             header('location: index.php');
         }
         //$errinhos[codErro][value]
     }
+}
 }
 ?>
 
@@ -69,11 +72,11 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                         <input type="password" name="confirmaSenha" id="confirmaSenha" required><br>
                     </div>
 
-                    <div class="label_input">
-                        <label class="label_erro" <?php //if (!empty($errinhos)){echo 'id="erro"';}else{echo "";}?>><?php //if (!empty($errinhos)){echo $errinhos['value'];}?></label>
-                    </div>
-
                     <div class="logo"><button type="submit" id="bt_cadastra">Cadastrar</button></div>
+
+                    <div class="label_input">
+                        <label id="erro" class="label_erro_off <?php if (!empty($errinhos)){echo 'erro_on';}?>"><?php if (!empty($errinhos)){echo $errinhos['value'];}?></label>
+                    </div>
 
                 </form>
                 <p id="voltar"><a href="index.php" class="bt_volta_login">Já tenho um cadastro</a></p>
