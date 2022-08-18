@@ -21,10 +21,15 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreMath</title>
+    <link rel="stylesheet" type="text/css" href="css/style_login.css">
 </head>
 
 <body>
     <form method="post">
+        <div class="main">
+            .cadastroz
+        </div>
+
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Digite seu melhor email!"><br>
         <label for="email">Senha:</label>
