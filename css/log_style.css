@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DynaPuff', cursive;
+}
+body{
+    background-image: url(img/Tela_Cadastro/background-login_e_cadastrar.jpg);
+    background-size: 100%;
+    background-position-y: 19%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+
+.main{
+}
+.quadro{
+    margin-left: 18.3%;
+    padding-top: 4%;
+    width: 62.8%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: athiti;    
+}
+#titulo_texto{
+    font-size: 40px;
+    font-family: 'DynaPuff', cursive;
+    color: aliceblue;
+}
+.titulo{
+    background-color: blue;
+}
+.entrada_login{
+    background-color: yellow;
+}
+.cadastrar_se{
+    background-color: green;
+}
