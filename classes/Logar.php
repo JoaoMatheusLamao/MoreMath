@@ -3,7 +3,9 @@ require_once("config.php");
 
 class Logar
 {
+    private $idUsu;
     public $email;
+    public $nome;
     private $senha;
     public $erros = array();
 
@@ -23,8 +25,11 @@ class Logar
                 ':senha' => $this->senha));
             //se existir... logar
             if ($usuarios) {
-                session_start();
-                echo "Login efetuado";
+                foreach ($usuarios as $key) {
+                    $this->idUsu = $key['id_usuario'];
+                }
+                $this->setDados();
+                header('location: restrito/index.php');
     
             } else {
                 throw new Exception("Usuário ou senha incorretos", 10);
@@ -34,8 +39,18 @@ class Logar
         }
     }
 
-
-
+    public function setDados(){
+        $objSql = new Sql();
+        $usuario = $objSql->exComand("select*from perfil_usuario where id_usuario = :idUsu", array(':idUsu' => $this->idUsu));
+        session_start();
+        foreach ($usuario as $key) {
+            foreach ($key as $cod => $value) {
+                $_SESSION[$cod] = $value;
+            }
+        }
+        $_SESSION['id_usuario'] = $this->idUsu;
+    }
 }
 
+//tem que pegar de login_usuario + adicionar token
 ?>
