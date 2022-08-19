@@ -30,8 +30,8 @@ class Logar
                     $this->idUsu = $key['id_usuario'];
                 }
                 $this->setDados();
+
                 header('location: restrito/index.php');
-    
             } else {
                 throw new Exception("Usuário ou senha incorretos", 10);
             }
@@ -45,20 +45,20 @@ class Logar
         $objSql = new Sql();
         $usuario = $objSql->exComand("select*from perfil_usuario where id_usuario = :idUsu", array(':idUsu' => $this->idUsu));
         session_start();
-        //setando dados nos flags da sessao
-        $_SESSION['id_usuario'] = $this->idUsu;
-        foreach ($usuario as $key) {
-            foreach ($key as $cod => $value) {
-                $_SESSION[$cod] = $value;
-            }
-        }
         //adcionando token ao banco
         $this->token = Usuario::criptoHash(uniqid().date('d-m-Y-H-i-s'));
         $objSql->exComand("update login_usuario set token = :token where email = :email and senha = :senha", array(
             ':token' => $this->token,
             ':email' => $this->email,
             ':senha' => $this->senha));
+        //setando dados nos flags da sessao
+        $_SESSION['id_usuario'] = $this->idUsu;
+        $_SESSION['token'] = $this->token;
+        foreach ($usuario as $key) {
+            foreach ($key as $cod => $value) {
+                $_SESSION[$cod] = $value;
+            }
+        }
     }
 }
-//tirar metodo contrutor
 ?>

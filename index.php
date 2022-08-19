@@ -10,6 +10,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     $loga = new Logar($email, $senha_cripto);
     $loga->Login();
 
+    //if para os erros
     if (isset($loga->erros) && !empty($loga->erros)) {
         print_r($loga->erros);
     }
