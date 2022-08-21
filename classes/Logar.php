@@ -24,15 +24,20 @@ class Logar
             $usuarios = $objSql->exComand("select*from login_usuario where email = :email and senha = :senha", array(
                 ':email' => $this->email,
                 ':senha' => $this->senha));
+
             //se existir... logar
             if ($usuarios) {
+                //pega o id_usuario do login_usuario para buscas nas outras tabelas
                 foreach ($usuarios as $key) {
                     $this->idUsu = $key['id_usuario'];
                 }
+                //função para setar os dados na sessao
                 $this->setDados();
-
+                
+                //entra no restrito
                 header('location: restrito/index.php');
             } else {
+                //erro caso senha e usuario não correspondam
                 throw new Exception("Usuário ou senha incorretos", 10);
             }
         } catch (Exception $th) {
@@ -42,18 +47,30 @@ class Logar
 
     //função para setar os dados na sessao
     public function setDados(){
-        $objSql = new Sql();
-        $usuario = $objSql->exComand("select*from perfil_usuario where id_usuario = :idUsu", array(':idUsu' => $this->idUsu));
+        //start sessão
         session_start();
-        //adcionando token ao banco
+
+        //gerando token
         $this->token = Usuario::criptoHash(uniqid().date('d-m-Y-H-i-s'));
+
+        //adcionando token ao banco
+        $objSql = new Sql();
         $objSql->exComand("update login_usuario set token = :token where email = :email and senha = :senha", array(
             ':token' => $this->token,
             ':email' => $this->email,
             ':senha' => $this->senha));
+
+        //pegar dados do respectivo usuario em perfil_usuario
+        $usuario = $objSql->exComand("select*from perfil_usuario where id_usuario = :idUsu", array(':idUsu' => $this->idUsu));
+
         //setando dados nos flags da sessao
-        $_SESSION['id_usuario'] = $this->idUsu;
+        //set token
         $_SESSION['token'] = $this->token;
+
+        //set id_usuario
+        $_SESSION['id_usuario'] = $this->idUsu;
+
+        //set nome, data_nasc_usu
         foreach ($usuario as $key) {
             foreach ($key as $cod => $value) {
                 $_SESSION[$cod] = $value;
