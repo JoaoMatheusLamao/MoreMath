@@ -5,9 +5,13 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     $senha = Usuario::limpaPost($_POST['senha']);
     $senha_cripto = Usuario::criptoHash($senha);
 
-
     $loga = new Logar($email, $senha_cripto);
     $loga->Login();
+
+    //if para os erros
+    if (isset($loga->erros) && !empty($loga->erros)) {
+        print_r($loga->erros);
+    }
 }
 ?>
 
