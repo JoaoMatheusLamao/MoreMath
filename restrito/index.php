@@ -4,7 +4,11 @@
 session_start();
 require_once("configRestrit.php");
 
-$autentica = UsuarioOk::autenticar($_SESSION['token']);
+$autenticar = new UsuarioOk();
+$testeToken = $autenticar->autenticar($_SESSION['token']);
 
-
+//se o usuario n passar na autenicação via token, é redirecionado a pagina de login
+if ($testeToken == false) {
+    header('location: ../index.php');
+}
 ?>
