@@ -144,10 +144,11 @@ body{
 }
 #A_Bt_Retorna :hover{  
     padding: 2%;  
-    font-size: 28px;
+    font-size: 25px;
     border-color: black;
     border-radius: 30px;
     border-style: solid;
     color: aliceblue;
     background-color: rgba(87, 114, 87, 0.432);
+    transition: 300ms;
 }
