@@ -37,7 +37,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
             <div class="entrada_login">
                 <form method="post">
                     <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" placeholder="Digite seu melhor email!"><br>
+                    <input type="email" name="email" id="email" <?php if(isset($_POST['email'])){echo 'value="'.$_POST['email'].'"';}?> placeholder="Digite seu melhor email!"><br>
                     <label for="email">Senha:</label>
                     <input type="password" name="senha" id="senha"><br>
                     <button type="submit">Cadastrar</button>
