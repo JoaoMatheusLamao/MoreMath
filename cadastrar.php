@@ -76,7 +76,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                     <button type="submit" id="bt_cadastra">Cadastrar</button>
                 </form>                    
             </div>
-            <div class="logo">
+            <div class="logo">            
                 <div class="Bt_retorna">
                     <a href="index.php" id="A_Bt_Retorna"><p id="texto_retorna">Já tem um cadastro</p></a>
                 </div>
