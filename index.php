@@ -4,14 +4,18 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     $email = Usuario::limpaPost($_POST['email']);
     $senha = Usuario::limpaPost($_POST['senha']);
     $senha_cripto = Usuario::criptoHash($senha);
+    $erros_login = array();
 
     $loga = new Logar($email, $senha_cripto);
     $loga->Login();
 
-    //if para os erros
-    if (isset($loga->erros) && !empty($loga->erros)) {
-        print_r($loga->erros);
+    foreach ($loga->erros as $errinhos) {
+        foreach ($errinhos as $cod => $value) {
+        }
     }
+
+    //if para os erros
+    
 }
 ?>
 
@@ -24,7 +28,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoreMath</title>
-    <link rel="stylesheet" type="text/css" href="css/style_log.css">
+    <link rel="stylesheet" type="text/css" href="css/style_log_2.css">
 </head>
 
 <body>
@@ -50,6 +54,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
                 </form> 
             </div>
             <div class="cadastrar_se">
+                <p class="msg_erro_off <?php if (isset($errinhos) && !empty($errinhos)) {echo "msg_erro_on";}?>"><?php if (isset($errinhos) && !empty($errinhos)) {echo $value;}?></p>
                 <p>Ainda não tem um cadastro? <br><a href="cadastrar.php" id="cadastrar">Cadastre-se</a></p>
             </div>
         </div>
