@@ -1,0 +1,15 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: aqua;
+    background-image: url("img/background.jpg");
+    background-size: 100%;
+    background-position-y: 30%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: 52%;
+    font-family: 'DynaPuff', cursive;
+}

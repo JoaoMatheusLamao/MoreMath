@@ -19,9 +19,9 @@ $usuario = new UsuarioOk();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/livrinhos_style.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livrinhos.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
-    <title>Document</title>
+    <title>Conteudos</title>
 
     <!-- Javascript cabeçario botão -->
     <script language="javascript">
@@ -40,19 +40,15 @@ $usuario = new UsuarioOk();
         }
     </script>
 
-    <!-- Swiper -->
-
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
     <link
         rel="stylesheet"
-        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+        href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
     />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <script type="module">
-        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
-        const swiper = new Swiper()
-    </script>
-    <!-- fim swiper -->
 </head>
 <body>
 
@@ -78,40 +74,36 @@ $usuario = new UsuarioOk();
     </div>
 
     <!-- livros    -->
-    <main> 
-        <div class="swiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide"><img src="css/img/Livro_1.png" alt="Livro de adilção" class="img_livros_swipe"></div>
-                <div class="swiper-slide"><img src="css/img/Livro_2.png" alt="Livro de subtração" class="img_livros_swipe"></div>
-                <div class="swiper-slide"><img src="css/img/Livro_3.png" alt="Livro de multiplicação" class="img_livros_swipe"></div>
-                <div class="swiper-slide"><img src="css/img/Livro_4.png" alt="Livro de divisão" class="img_livros_swipe"></div>
-                ...
-            </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
+    <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide"><a href="conteudos/soma.php"><img src="css/img/livro_1.png" alt="link de conteudo para soma"></a></div>
+        <div class="swiper-slide"><a href="conteudos/subtracao.php"><img src="css/img/Livro_2.png" alt="link de conteudo para subtração"></a></div>
+        <div class="swiper-slide"><a href="conteudos/multiplicacao.php"><img src="css/img/Livro_3.png" alt="link de conteudo para multiplicação"></a></div>
+        <div class="swiper-slide"><a href="conteudos/divisao.php"><img src="css/img/Livro_4.png" alt="link de conteudo para divisão"></a></div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+    </div>
 
-            <!-- If we need navigation buttons -->
-            <div class="swiper-button-next"></div>
-        </div>
-        <script lang="javascript">
-            const swiper = new Swiper('.swiper', {
-                // Optional parameters
-                loop: true,
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-                // If we need pagination
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-
-                // Navigation arrows
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                },
-            });
-        </script>
-    </main>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+            el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+        });
+    </script>
 
 
     

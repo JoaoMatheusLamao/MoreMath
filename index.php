@@ -27,7 +27,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MoreMath</title>
+    <title>Acesse o MoreMath</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/style_log_2.css">
 </head>
