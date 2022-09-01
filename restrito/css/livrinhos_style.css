@@ -7,11 +7,12 @@
     margin: 0%;
 }
 body{
+    background-color: rgb(128, 125, 96);
     background-image: url("img/backgruond_livrinhos.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position-y: 50px;
+    background-position-y: 72px;
     font-family: 'DynaPuff', cursive;
 }
 
@@ -28,6 +29,12 @@ header{
     border-bottom-left-radius: 90px;
     border-bottom-right-radius: 90px;
     margin-bottom: 8%;
+}
+
+/* Trabalhando na main*/
+main{
+    padding-top: 1%;
+    margin-left: 32%;
 }
 
 /* Desgin da fonte do titulo da pagina: Conteudos*/
@@ -58,7 +65,7 @@ header{
     background-color: burlywood;
     width: 50%;
     height: 200px;
-    margin-top: -12%;
+    margin-top: -12.5%;
     margin-left: 45%;
     border-style: solid;
     border-radius: 30px;
@@ -100,4 +107,14 @@ header{
     font-size: 110%;
 }
 
+.img_livros_swipe{
+    width: 45%;
+}
 
+.swiper {
+    width: 600px;
+    height: 300px;
+}
+.swiper-slide{
+    margin-left: 8%;
+}

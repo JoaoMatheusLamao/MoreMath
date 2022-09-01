@@ -23,11 +23,9 @@ $usuario = new UsuarioOk();
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Document</title>
 
-
+    <!-- Javascript cabeçario botão -->
     <script language="javascript">
         a = 0
-
-        
         function esconde_div(){
             if (a == 0){
                 document.getElementById("invisivel").style.visibility="visible"
@@ -41,8 +39,23 @@ $usuario = new UsuarioOk();
             }
         }
     </script>
+
+    <!-- Swiper -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.esm.browser.min.js'
+        const swiper = new Swiper()
+    </script>
+    <!-- fim swiper -->
 </head>
 <body>
+
     <!-- cabeçario com a logo, perfil, e nome da pagina  -->
     <header>    
         <div><p id="pag_nom"> Conteúdos </p></div>
@@ -64,14 +77,46 @@ $usuario = new UsuarioOk();
         </div>
     </div>
 
-    <!-- livros -->
-    <main>  
-        <div class="estante">
-            <div class="livro_soma"><a href="conteudos/soma.php"><img src="css/img/Livro_1.png" alt="Livro de adilção"></a> </div>
-            <div class="livro_subtracao"><a href="conteudos/subtracao.php"><img src="css/img/Livro_2.png" alt="Livro de subtração"></a> </div>
-            <div class="livro_multiplicao"><a href="conteudos/multiplicacao.php"><img src="css/img/Livro_3.png" alt="Livro de multiplicação"></a> </div>
-            <div class="livro_divisao"><a href="conteudos/divisao.php"><img src="css/img/Livro_4.png" alt="Livro de divisão"></a> </div>
+    <!-- livros    -->
+    <main> 
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="css/img/Livro_1.png" alt="Livro de adilção" class="img_livros_swipe"></div>
+                <div class="swiper-slide"><img src="css/img/Livro_2.png" alt="Livro de subtração" class="img_livros_swipe"></div>
+                <div class="swiper-slide"><img src="css/img/Livro_3.png" alt="Livro de multiplicação" class="img_livros_swipe"></div>
+                <div class="swiper-slide"><img src="css/img/Livro_4.png" alt="Livro de divisão" class="img_livros_swipe"></div>
+                ...
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-next"></div>
         </div>
+        <script lang="javascript">
+            const swiper = new Swiper('.swiper', {
+                // Optional parameters
+                loop: true,
+
+                // If we need pagination
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                },
+            });
+        </script>
     </main>
+
+
+    
+    
+
+
 </body>
 </html> 
