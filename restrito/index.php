@@ -1,4 +1,6 @@
 <?php
+
+//falta terminar os dados no cadastro... tem que pegar o telefone
 //flags da sessao disponiveis:
 //$_SESSION['token'], $_SESSION['nome_usuario'], $_SESSION['data_nasc_usu'], $_SESSION['id_usuario']
 require_once("configRestrit.php");
@@ -6,15 +8,16 @@ session_start();
 
 //var_dump($_SESSION['token']);
 
-$usuario = new UsuarioOk();
+//$usuario = new UsuarioOk();
 
-// if (!$usuario->autenticar($_SESSION['token'])) {
-//    header('location: ../index.php');
+//var_dump($_SESSION['email']);
+//if (!$usuario->autenticar($_SESSION['token'])) {
+   //header('location: ../index.php');
 //}
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,11 +66,11 @@ $usuario = new UsuarioOk();
         <div class="display_flutuante">
             <div class="imagem"> <img src="css/img/Coruja.png"></div>
             <div class="usuario">
-                <div class="nome_usuario"><p>  Nome de usuario  </p></div>
+                <div class="nome_usuario"><p>  <?php if(isset($_SESSION['nome_usuario'])) {echo ucfirst($_SESSION['nome_usuario']);}?>  </p></div>
                 <div class="dados_usuario"> 
-                    <p> Email: </p>
-                    <p> Telefone:</p>
-                    <p> Data de nascimento:</p>
+                    <p> Email: <?php if(isset($_SESSION['email'])) {echo $_SESSION['email'];}?></p>
+                    <p> Telefone: <?php if(isset($_SESSION['telefone'])) {echo $_SESSION['telefone'];}?></p>
+                    <p> Data de nascimento: <?php if(isset($_SESSION['data_nasc_usu'])) {echo $_SESSION['data_nasc_usu'];}?></p>
                 </div>
             </div>
         </div>
@@ -104,11 +107,5 @@ $usuario = new UsuarioOk();
             keyboard: true,
         });
     </script>
-
-
-    
-    
-
-
 </body>
 </html> 
