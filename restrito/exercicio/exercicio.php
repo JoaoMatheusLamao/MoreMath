@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style_exercicio.css">
+    <link rel="stylesheet" href="css/style_exercicio1.css">
 
     <title>Exercícios</title>
 </head>
@@ -14,18 +13,19 @@
     <main>
         <div class="trilho_titulo">
             <div class="titulo">
-                <h1>Resolva</h1>
+                <img src="css/img/resolva.png">
             </div>
         </div>
         <div class="centro">
             <div class="quadro_conta">
                 <div class="conta">
-                    <p>22 + 25 =</p>
+                    <p>22 + 25 = <img src="css/img/interrogacao.png" id="imgInterrog"></p>
                 </div>
                 <div class="form_resp">
                     <form method="post">
-                        <input type="text" name="inpResposta" id="inpResposta" placeholder="Insira sua resposta:">
-                        <input type="submit" value="Responder">
+                        <label for="inpResposta">R:</label>
+                        <input type="text" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
+                        <input type="submit" value="Responder" id="btnEnvia" class="input">
                     </form>
                 </div>
             </div>
@@ -35,5 +35,4 @@
         </div>
     </main>
 </body>
-
 </html>
