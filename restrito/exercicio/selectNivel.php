@@ -19,13 +19,13 @@
             <div class="quadro_esquerda">
                 <div class="select_nivel">
                     <p>Nível:</p>
-                    <a href="exercicio.php">Fixação</a>
+                    <a href="exercicio.php"><p>Fixação</p></a>
                 </div>
             </div>
             <div class="quadro_direita">
                 <div class="select_nivel">
                     <p>Nível:</p>
-                    <a href="exercicio.php" id="direita">Aprofundamento</a>
+                    <a href="exercicio.php" id="direita"><p>Aprofundamento</p></a>
                 </div>
             </div>
         </div>
