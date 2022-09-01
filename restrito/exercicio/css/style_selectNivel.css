@@ -71,8 +71,17 @@ main{
     background-color: #f7afba;
     color: #f9ff4f;
     width: 160%;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-top: 7%;
 }
+
+.select_nivel a:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
 #direita{
     background-color: #9CDBD2;
 }
