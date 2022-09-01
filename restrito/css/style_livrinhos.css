@@ -1,0 +1,142 @@
+/* pré formatação padrao da pagina */
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap');
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(128, 125, 96);
+    background-image: url("img/backgruond_livrinhos.jpg");
+    background-size: 130%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position-x: 52%;
+    font-family: 'DynaPuff', cursive;
+}
+
+/* Cabeçario com os 3 botoes principais */
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    background-color: rgb(226, 208, 243);
+    border-style: solid;
+    border-color: black;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    margin-bottom: 8%;
+}
+
+/* Trabalhando na main*/
+main{
+    padding-top: 1%;
+    margin-left: 32%;
+}
+
+/* Desgin da fonte do titulo da pagina: Conteudos*/
+#pag_nom{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 59px;
+    line-height: 71px;
+    color: #000000;
+}
+
+/* Formatação da logo no canto superior central da página */
+#img{
+    transform: rotate(8deg);
+    width: 40%;
+}
+
+
+/* Formatação da tela flutuante*/
+#tela_perfil{
+    z-index: 3;
+}
+
+.display_flutuante{
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    background-color: burlywood;
+    width: 50%;
+    height: 200px;
+    margin-top: -12.5%;
+    margin-left: 45%;
+    border-style: solid;
+    border-radius: 30px;
+}
+
+/* editando divs de dentro da div flutuante */
+.imagem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+}
+.imagem img{
+    width: 60%;
+}
+.usuario{
+    width: 70%;
+    padding-top: 5%;
+    background-color: rgba(208, 176, 134, 0.356);
+}
+.nome_usuario p {
+    text-align: center;
+    width: 100%;
+    font-size: 200%;
+}
+.dados_usuario{
+    display: flex;
+    padding-left: 8%;
+    padding-top: 0.4%;
+    justify-content: center;
+    flex-direction: column;
+    width: 70%;
+}
+.dados_usuario p{
+    padding-top: 2%;
+    padding-left: 3%;
+    border-bottom: 1px black solid;
+    border-width: 10%;
+    font-size: 110%;
+}
+
+.img_livros_swipe{
+    width: 45%;
+}
+
+.swiper {
+    margin-top: 4%;
+    width: 30%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    width: 75%;
+    padding-bottom: 10%;
+}
