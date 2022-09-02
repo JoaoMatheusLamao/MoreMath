@@ -1,5 +1,14 @@
+<?php
+session_start();
+$id_componente = 4;
+if (isset($_SESSION['componente']) && $_SESSION['componente'] != $id_componente) {
+    $_SESSION['componente'] = $id_componente;
+}
+//var_dump($_SESSION['componente']);
+?>
+
 <!DOCTYPE html>
-<html lang="ptbr">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +18,6 @@
     <link rel="stylesheet" href="css/style_divisao.css">
 </head> 
 <body>
-    
+    <a href="../exercicio/selectNivel.php">Faça exercícios</a>
 </body>
 </html>
