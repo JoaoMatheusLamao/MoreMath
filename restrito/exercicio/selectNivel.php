@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_menu_nivel.css">
+    <link rel="stylesheet" href="css/style_menu_exercicios.css">
 
     <title>Escolha um nível</title>
 </head>
@@ -16,16 +16,16 @@
 <body>
     <main>
         <div class="quadro_global">
-            <div class="quadro_esquerda">
-                <div class="select_nivel">
+            <div class="quadro" id="Quadro_1">
+                <div class="select_nivel" id="esquerda">
                     <p>Nível:</p>
-                    <a href="exercicio.php"><p>Fixação</p></a>
+                    <a href="exercicio.php"><p>Fixação</p></a>   
                 </div>
             </div>
-            <div class="quadro_direita">
-                <div class="select_nivel">
+            <div class="quadro" id="Quadro_2">
+                <div class="select_nivel" id="direita">
                     <p>Nível:</p>
-                    <a href="exercicio.php" id="direita"><p>Aprofundamento</p></a>
+                    <a href="exercicio.php"><p>Aprofundamento</p></a>
                 </div>
             </div>
         </div>
