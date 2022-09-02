@@ -7,7 +7,7 @@
     margin: 0%;
 }
 body{
-    background-color: rgb(128, 125, 96);
+    background-color: rgb(160, 158, 137);
     background-image: url("img/backgruond_livrinhos.jpg");
     background-size: 130%;
     background-attachment: fixed;
@@ -88,42 +88,41 @@ main{
 }
 .nome_usuario p {
     text-align: center;
-    width: 90%;
+    width: 100%;
     font-size: 200%;
 }
 .dados_usuario{
     display: flex;
     padding-left: 8%;
     padding-top: 0.4%;
+    justify-content: center;
     flex-direction: column;
+    width: 70%;
 }
-
 .pai_dados{
     display: flex;
     flex-direction: row;
-    width: 90%;
-}
-.esquerda{
-    background-color: aqua;
-    width: 40%;
-    align-items: left;
-}
-.direita{
-    background-color: rgb(25, 124, 124);
-    width: 60%;
-    align-items: right;
+    width: 100%;
 }
 
 .pai_dados p{
-    width: 70%;
+    width: 100%;
     padding-top: 2%;
     padding-left: 3%;
     border-bottom: 1px black solid;
     border-width: 10%;
     font-size: 110%;
+    display: flex;
+    justify-content: space-between;
 }
 
+.esquerda{
+    font-size: 110%;
+}
 
+.direita{
+    padding-right: 3%;
+}
 
 .img_livros_swipe{
     width: 45%;
