@@ -4,6 +4,7 @@ $id_componente = 2;
 if (isset($_SESSION['componente']) && $_SESSION['componente'] != $id_componente) {
     $_SESSION['componente'] = $id_componente;
 }
+$_SESSION['componente'] = $id_componente;
 //var_dump($_SESSION['componente']);
 ?>
 
