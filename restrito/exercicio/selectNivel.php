@@ -8,7 +8,7 @@
 
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_selectNivel.css">
+    <link rel="stylesheet" href="css/style_menu_nivel.css">
 
     <title>Escolha um nível</title>
 </head>
