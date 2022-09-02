@@ -34,7 +34,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastre-se no MoreMath</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/style_cad.css">
+    <link rel="stylesheet" type="text/css" href="css/style_cad_2.css">
 </head>
 
 <body>
