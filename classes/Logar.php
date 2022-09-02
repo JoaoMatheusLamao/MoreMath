@@ -65,7 +65,7 @@ class Logar
         //setando dados nos flags da sessao
         //set nome, data_nasc_usu
         foreach ($usuario as $key) {
-            $_SESSION['nome'] = $key['nome_usuario'];
+            $_SESSION['nome_usuario'] = $key['nome_usuario'];
             $_SESSION['data_nasc_usu'] = str_replace('-', '/', date('d-m-Y', strtotime($key['data_nasc_usu'])));
         }
         //set token

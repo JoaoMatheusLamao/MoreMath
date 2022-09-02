@@ -9,10 +9,10 @@
 body{
     background-color: rgb(128, 125, 96);
     background-image: url("img/backgruond_livrinhos.jpg");
-    background-size: cover;
+    background-size: 130%;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position-y: 72px;
+    background-position-x: 52%;
     font-family: 'DynaPuff', cursive;
 }
 
@@ -26,8 +26,8 @@ header{
     background-color: rgb(226, 208, 243);
     border-style: solid;
     border-color: black;
-    border-bottom-left-radius: 90px;
-    border-bottom-right-radius: 90px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
     margin-bottom: 8%;
 }
 
@@ -88,18 +88,34 @@ main{
 }
 .nome_usuario p {
     text-align: center;
-    width: 100%;
+    width: 90%;
     font-size: 200%;
 }
 .dados_usuario{
     display: flex;
     padding-left: 8%;
     padding-top: 0.4%;
-    justify-content: center;
     flex-direction: column;
-    width: 70%;
 }
-.dados_usuario p{
+
+.pai_dados{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+}
+.esquerda{
+    background-color: aqua;
+    width: 40%;
+    align-items: left;
+}
+.direita{
+    background-color: rgb(25, 124, 124);
+    width: 60%;
+    align-items: right;
+}
+
+.pai_dados p{
+    width: 70%;
     padding-top: 2%;
     padding-left: 3%;
     border-bottom: 1px black solid;
@@ -107,14 +123,37 @@ main{
     font-size: 110%;
 }
 
+
+
 .img_livros_swipe{
     width: 45%;
 }
 
 .swiper {
-    width: 600px;
-    height: 300px;
+    margin-top: 4%;
+    width: 30%;
 }
-.swiper-slide{
-    margin-left: 8%;
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img{
+    width: 75%;
+    padding-bottom: 10%;
 }

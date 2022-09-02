@@ -6,14 +6,14 @@
 require_once("configRestrit.php");
 session_start();
 
-//var_dump($_SESSION['token']);
+//var_dump($_SESSION['nome_usuario']);
 
-//$usuario = new UsuarioOk();
+$usuario = new UsuarioOk();
 
 //var_dump($_SESSION['email']);
-//if (!$usuario->autenticar($_SESSION['token'])) {
-   //header('location: ../index.php');
-//}
+if (!$usuario->autenticar($_SESSION['token'])) {
+   header('location: ../index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_conteudos.css">
+    <link rel="stylesheet" type="text/css "href="css/livrinhos_style.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -67,10 +67,16 @@ session_start();
             <div class="imagem"> <img src="css/img/Coruja.png"></div>
             <div class="usuario">
                 <div class="nome_usuario"><p>  <?php if(isset($_SESSION['nome_usuario'])) {echo ucfirst($_SESSION['nome_usuario']);}?>  </p></div>
-                <div class="dados_usuario"> 
-                    <p> Email: <?php if(isset($_SESSION['email'])) {echo $_SESSION['email'];}?></p>
-                    <p> Telefone: <?php if(isset($_SESSION['telefone'])) {echo $_SESSION['telefone'];}?></p>
-                    <p> Data de nascimento: <?php if(isset($_SESSION['data_nasc_usu'])) {echo $_SESSION['data_nasc_usu'];}?></p>
+                <div class="dados_usuario">
+                    <div class="pai_dados">
+                        <p> <span class="esquerda">Email:</span>  <span class="direita"><?php if(isset($_SESSION['email'])) {echo $_SESSION['email'];}?></span></p>
+                    </div> 
+                    <div class="pai_dados">
+                        <p> <span class="esquerda">Telefone:</span>  <span class="direita"><?php if(isset($_SESSION['telefone'])) {echo $_SESSION['telefone'];}?></span></p>
+                    </div> 
+                    <div class="pai_dados">
+                        <p> <span class="esquerda"> Data de nascimento: </span> <span class="direita"><?php if(isset($_SESSION['data_nasc_usu'])) {echo $_SESSION['data_nasc_usu'];}?></span></p>
+                    </div> 
                 </div>
             </div>
         </div>
