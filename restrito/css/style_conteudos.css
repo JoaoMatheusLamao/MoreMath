@@ -84,7 +84,7 @@ main{
 .usuario{
     width: 70%;
     padding-top: 5%;
-    background-color: rgba(228, 204, 171, 0.454);
+    background-color: rgba(208, 176, 134, 0.356);
 }
 .nome_usuario p {
     text-align: center;
@@ -114,7 +114,6 @@ main{
 .swiper {
     margin-top: 4%;
     width: 30%;
-    height: 100%;
 }
 
 .swiper-slide {
