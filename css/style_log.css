@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'DynaPuff', cursive;
+}
+body{
+    background-image: url(img/Tela_Cadastro/background.jpg);
+    background-size: 100%;
+    background-position-y: 19%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.quadro{
+    margin-left: 18.3%;
+    padding-top: 4%;
+    width: 62.8%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: athiti;    
+}
+#titulo_texto{
+    font-size: 40px;
+    font-family: 'DynaPuff', cursive;
+    color: aliceblue;
+    text-align: center;
+}
+.entrada_login{
+    margin-top: 5%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+#grupo_1, #grupo_2, #grupo_3{
+    padding-bottom: 1%;
+}
+#grupo_1{
+    padding-top: 1%;
+}
+
+.entrada_login label{
+    color: aliceblue;
+    font-size: 130%;
+}
+
+#bt_login{
+    height: 10%;
+    width: 10%;
+    border-radius: 40px;
+    border-color: rgb(48, 54, 44);
+    background-color: rgb(223, 248, 205);
+    border-style: double;
+    padding: 1%;
+    margin-bottom: 2%;
+}
+
+#email, #senha{
+    width: 40%;
+    padding-left: 3%;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 90%;
+}
+
+.msg_erro_off{
+    visibility: hidden;
+    color: red;
+}
+
+.msg_erro_on{
+    visibility: visible;
+}
+
+
+.cadastrar_se{
+    margin-top: 3%;
+    text-align: center;
+    color: aliceblue;
+}
+
+#cadastrar{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#cadastrar:hover{
+    padding: 2%;  
+    font-size: 25px;
+    border-color: black;
+    border-radius: 30px;
+    border-style: solid;
+    color: aliceblue;
+    background-color: rgba(87, 114, 87, 60.100);
+    transition: 300ms;
+}
+
+#grupo_1 input{
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 260px;
+    border-style: none;
+    border-bottom-style: double;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(205, 233, 185);
+    padding-left: 5px;
+    margin-top: 2%;
+    padding-left: 4%;
+}
+
+#grupo_2 input{
+    color: rgb(0, 0, 0);
+    height: 30px;
+    width: 260px;
+    border-style: none;
+    border-bottom-style: double;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(205, 233, 185);
+    padding-left: 5px;
+    margin-top: 2%;
+    padding-left: 4%;
+}
