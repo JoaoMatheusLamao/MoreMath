@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_exercicio1.css">
+    <link rel="stylesheet" href="css/style_exercicios2.css">
 
     <title>Exercícios</title>
 </head>
@@ -13,7 +14,7 @@
     <main>
         <div class="trilho_titulo">
             <div class="titulo">
-                <img src="css/img/resolva.png">
+                <h1 id="titulo">Resolva</h1>
             </div>
         </div>
         <div class="centro">
