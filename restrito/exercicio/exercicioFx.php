@@ -3,10 +3,11 @@
 require_once("configRestrit.php");
 session_start();
 
-//var_dump($_SESSION['componente']);
-$puxaEx = new Exercicio("1", $_SESSION['componente']);
-$teste = $puxaEx->puxaEx();
-var_dump($teste);
+$puxaEx = new Exercicio();
+$puxaEx->puxaEx("1", $_SESSION['componente']);
+
+$enunciado = $puxaEx->getEnunciado();
+
 ?>
 
 <!DOCTYPE html>
@@ -31,20 +32,29 @@ var_dump($teste);
         <div class="centro">
             <div class="quadro_conta">
                 <div class="conta">
-                    <p>22 + 25 = <img src="css/img/interrogacao.png" id="imgInterrog"></p>
+                    <p>
+                        <?php
+                            if (isset($enunciado)) {
+                                echo $enunciado;
+                            }
+                        ?> =
+                    </p>
                 </div>
                 <div class="form_resp">
-                    <form method="post">
+                    <form id="formResposta" method="post">
                         <label for="inpResposta">R:</label>
-                        <input type="text" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
+                        <input type="text" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
                         <input type="submit" value="Responder" id="btnEnvia" class="input">
                     </form>
                 </div>
+                <span><p class="status"></p></span>
             </div>
-            <form method="post">
+            <form action="" method="post">
                 <input type="submit" name="pulaEx" id="pulaEx" value="Pular exercício">
             </form>
         </div>
     </main>
+    <script src="../assets/js/jqueryImport.js"></script>
+    <script src="js/scriptEx.js"></script>
 </body>
 </html>
