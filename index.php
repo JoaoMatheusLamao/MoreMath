@@ -9,10 +9,10 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     $loga = new Logar($email, $senha_cripto);
     $loga->Login();
 
-    foreach ($loga->erros as $errinhos) {
-        foreach ($errinhos as $cod => $value) {
-        }
-    }
+ //   foreach ($loga->erros as $errinhos) {
+ //       foreach ($errinhos as $cod => $value) {
+ //       }
+//    }
 
     //if para os erros
     

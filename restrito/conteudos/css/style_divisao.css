@@ -4,12 +4,53 @@
 }
 
 body{
-    background-color: aqua;
+    background-color: rgb(216, 255, 255);
     background-image: url("img/background.jpg");
-    background-size: 100%;
+    background-size: cover;
     background-position-y: 30%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: 52%;
     font-family: 'DynaPuff', cursive;
+}
+
+main{
+    width: 205.4vh; 
+    height: 100vh;
+}
+
+/*Grupo para ordena os conteudos e o menu lateral*/
+.conteudo{
+    display: flex;
+    flex-direction: row;
+    width: 205.4vh;
+    height: 100vh;
+
+}
+
+/*Menu lateral -ficará invisivel-*/
+.menu{
+    background-color: brown;
+    height: 80%;
+    width: 10%;
+    margin-top: 2%;
+}
+
+
+
+/*Grupo dos conteudos*/
+.conteudos{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: aqua;
+    width: 90%;
+}
+
+.titulo_conteudo{
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+    width: 20%;
 }
