@@ -38,6 +38,7 @@ $_SESSION['componente'] = $id_componente;
 
 </head> 
 <body>
+    <a href="../exercicio/selectNivel.php">Faça exercícios</a>
     <div class="bt_menu" id="invisivel" style="display: a;">
         <!-- Chama função de mostrar/esconder o menu lateral -->
         <a href="javascript:void(esconde_div())" class="bt_menu_lateral"> → </a>
@@ -59,10 +60,5 @@ $_SESSION['componente'] = $id_componente;
         </div>
     </main>
 
-
-
-
-
-    <!-- <a href="../exercicio/selectNivel.php">Faça exercícios</a> -->
 </body>
 </html>

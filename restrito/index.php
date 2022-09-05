@@ -10,7 +10,7 @@ session_start();
 
 $usuario = new UsuarioOk();
 
-//var_dump($_SESSION['email']);
+//var_dump($_SESSION['token']);
 if (!$usuario->autenticar($_SESSION['token'])) {
    header('location: ../index.php');
 }

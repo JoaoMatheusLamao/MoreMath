@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -19,13 +23,13 @@
             <div class="quadro" id="Quadro_1">
                 <div class="select_nivel" id="esquerda">
                     <p>Nível:</p>
-                    <a href="exercicio.php"><p>Fixação</p></a>   
+                    <a href="exercicioFx.php"><p>Fixação</p></a>   
                 </div>
             </div>
             <div class="quadro" id="Quadro_2">
                 <div class="select_nivel" id="direita">
                     <p>Nível:</p>
-                    <a href="exercicio.php"><p>Aprofundamento</p></a>
+                    <a href="exercicioAp.php"><p>Aprofundamento</p></a>
                 </div>
             </div>
         </div>
