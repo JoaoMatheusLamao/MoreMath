@@ -10,10 +10,12 @@ session_start();
 
 $usuario = new UsuarioOk();
 
+
 //var_dump($_SESSION['token']);
-//  if (!$usuario->autenticar($_SESSION['token'])) {
-//        header('location: ../index.php');
-//}
+  if (!$usuario->autenticar($_SESSION['token'])) {
+       header('location: ../index.php');
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -80,7 +82,9 @@ $usuario = new UsuarioOk();
                 </div>
             </div>
             <div class="sair">
-                <button id="bt_sair"> sair </button>
+                <form action="logout.php">
+                    <input type="submit" value="Sair">
+                </form>
             </div>
         </div>
     </div>
