@@ -22,7 +22,7 @@ $usuario = new UsuarioOk();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style1_livrinhos.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livrinhos.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -79,6 +79,9 @@ $usuario = new UsuarioOk();
                     </div> 
                 </div>
             </div>
+            <div class="sair">
+                <button id="bt_sair"> sair </button>
+            </div>
         </div>
     </div>
 
@@ -93,6 +96,11 @@ $usuario = new UsuarioOk();
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
+    </div>
+
+    <div class="rodape">
+        <a href="sobre_nos.php"><p id="text_rodape">Para sabaer mais sobre nós</p></a>
+
     </div>
 
     <!-- Swiper JS -->
