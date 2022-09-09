@@ -13,16 +13,39 @@ class Exercicio{
         $this->nivel = $nivel;
 
         $tipo = $this->selectTipo();
+
+        
+
         $exercicio = new Sql();
         $ex = $exercicio->exComand("select*from exercicio where id_tipo_exercicio = :idTipo order by rand() limit 1", array(
             ':idTipo' => $tipo));
         foreach ($ex as $key) {
+        }
+        
+        if ($this->noRepeatEx($key['id_exercicio']) == false) {
             $this->setIdEx($key['id_exercicio']);
             $this->setEnunciado($key['enunciado']);
             $this->setRespCorreta($key['resposta_correta']);
+        } else {
+            $this->setEnunciado("Parabéns, você fez todos os exercícios");
         }
     }
 
+    public function noRepeatEx($idEx)
+    {
+        $objSql = new Sql();
+        $exJaFeito = $objSql->exComand("select*from resposta_usuario where id_usuario = :idUsu and id_exercicio = :idEx and status_resposta = 1", array(
+            ':idUsu' => $_SESSION['id_usuario'],
+            ':idEx' => $idEx
+        ));
+        if (empty($exJaFeito)) {
+            //se esta vazio é pq o usuario n respondeu esse exercicio ainda
+            return true;
+        } else {
+            //se esta preenchido, o usuario ja respondeu corretamente o exercicio
+            return false;
+        }
+    }
 
     //função para pegar o tipo de exercicio que o usuario quer
     public function selectTipo()
