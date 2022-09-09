@@ -1,15 +1,3 @@
-<?php
-
-require_once("configRestrit.php");
-session_start();
-
-$puxaEx = new Exercicio();
-$puxaEx->puxaEx("1", $_SESSION['componente']);
-
-$enunciado = $puxaEx->getEnunciado();
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -32,25 +20,21 @@ $enunciado = $puxaEx->getEnunciado();
         <div class="centro">
             <div class="quadro_conta">
                 <div class="conta">
-                    <p>
-                        <?php
-                            if (isset($enunciado)) {
-                                echo $enunciado;
-                            }
-                        ?> =
+                    <p id="paragrafo_enunciado">
+                        
                     </p>
                 </div>
                 <div class="form_resp">
                     <form id="formResposta" method="post">
                         <label for="inpResposta">R:</label>
-                        <input type="text" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
+                        <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
                         <input type="submit" value="Responder" id="btnEnvia" class="input">
                     </form>
                 </div>
                 <span><p class="status"></p></span>
             </div>
             <form action="" method="post">
-                <input type="submit" name="pulaEx" id="pulaEx" value="Pular exercício">
+                <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
             </form>
         </div>
     </main>

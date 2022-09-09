@@ -12,17 +12,44 @@ class Exercicio{
         $this->componente = $componente;
         $this->nivel = $nivel;
 
+        //selecionano tipo de exercicio que o usuario quer
         $tipo = $this->selectTipo();
+
+        //pega um exercicio do banco
         $exercicio = new Sql();
         $ex = $exercicio->exComand("select*from exercicio where id_tipo_exercicio = :idTipo order by rand() limit 1", array(
             ':idTipo' => $tipo));
+            //extrai do array
         foreach ($ex as $key) {
-            $this->setIdEx($key['id_exercicio']);
-            $this->setEnunciado($key['enunciado']);
-            $this->setRespCorreta($key['resposta_correta']);
+            //se o array vier vazio, n pegou nada do banco
+            if (!empty($key)) {
+                //se o usuario ja fez esse exercicio, a página é recarregada
+                if ($this->noRepeatEx($key['id_exercicio']) == true) {
+                    $this->setIdEx($key['id_exercicio']);
+                    $this->setEnunciado($key['enunciado']);
+                    $this->setRespCorreta($key['resposta_correta']);
+                } else {
+                    header("Refresh: 0");
+                }
+            }
         }
     }
 
+    public function noRepeatEx($idEx)
+    {
+        $objSql = new Sql();
+        $exJaFeito = $objSql->exComand("select*from resposta_usuario where id_usuario = :idUsu and id_exercicio = :idEx and status_resposta = 1", array(
+            ':idUsu' => $_SESSION['id_usuario'],
+            ':idEx' => $idEx
+        ));
+        if (empty($exJaFeito)) {
+            //se esta vazio é pq o usuario n respondeu esse exercicio ainda
+            return true;
+        } else {
+            //se esta preenchido, o usuario ja respondeu corretamente o exercicio
+            return false;
+        }
+    }
 
     //função para pegar o tipo de exercicio que o usuario quer
     public function selectTipo()
