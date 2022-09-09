@@ -31,12 +31,13 @@ $_SESSION['nível'] = $id_nivel;
                     <p id="paragrafo_enunciado"></p>
                 </div>
                 <div class="form_resp">
-                    <form method="post">
+                    <form id="formResposta" method="post">
                         <label for="inpResposta">R:</label>
                         <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
                         <input type="submit" value="Responder" id="btnEnvia" class="input">
                     </form>
                 </div>
+                <span><p class="status"></p></span>
             </div>
             <form method="post">
                 <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">

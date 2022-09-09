@@ -27,7 +27,6 @@ $(document).ready(function(){
         method: 'POST',
         dataType: 'json'
     }).done(function(enunciado){
-        console.log("okkk");
         if (enunciado === "") {
             location.reload(true);
         } else{
