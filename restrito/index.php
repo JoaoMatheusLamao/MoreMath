@@ -80,7 +80,9 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 </div>
             </div>
             <div class="sair">
-                <button id="bt_sair"> sair </button>
+                <form action="logout.php">
+                    <input id="bt_sair" type="submit" value="Sair">
+                </form>
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ $_SESSION['nível'] = $id_nivel;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_exercicios2.css">
+    <link rel="stylesheet" href="css/style_exercicioAp.css">
 
     <title>Exercícios</title>
 </head>
@@ -33,7 +33,7 @@ $_SESSION['nível'] = $id_nivel;
                 <div class="form_resp">
                     <form method="post">
                         <label for="inpResposta">R:</label>
-                        <input type="text" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
+                        <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
                         <input type="submit" value="Responder" id="btnEnvia" class="input">
                     </form>
                 </div>
