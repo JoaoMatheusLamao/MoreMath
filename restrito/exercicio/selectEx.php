@@ -1,13 +1,14 @@
 <?php
-
-//algoritmo que devolve para o javascript a correção do exercicio
 session_start();
 header('Content-Type: application/json');
+
 require_once("configRestrit.php");
 
-$respUsu = $_POST['resposta'];
+$puxaEx = new Exercicio();
+$puxaEx->puxaEx($_SESSION['nível'], $_SESSION['componente']);
 
-$corrige = new Exercicio();
-$statusResp = $corrige->corrigeEx($respUsu);
-echo json_encode($statusResp);
+$enunciado = utf8_encode($puxaEx->getEnunciado());
+
+echo json_encode($enunciado);
+
 ?>

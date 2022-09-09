@@ -1,11 +1,10 @@
-
 $('#formResposta').submit(function(e) {
     e.preventDefault();
 
     var u_resp = $('#inpResposta').val();
     
     $.ajax({
-        url: 'http://localhost/restrito/exercicio/selectEx.php',
+        url: 'http://localhost/restrito/exercicio/corrigeEx.php',
         method: 'POST',
         data: {resposta: u_resp},
         dataType: 'json'
@@ -21,3 +20,19 @@ $('#formResposta').submit(function(e) {
     });
 
 });
+
+$(document).ready(function(){
+	$.ajax({
+        url: 'http://localhost/restrito/exercicio/selectEx.php',
+        method: 'POST',
+        dataType: 'json'
+    }).done(function(enunciado){
+        console.log("okkk");
+        if (enunciado === "") {
+            location.reload(true);
+        } else{
+            var enunciadoCompleto = enunciado + "=";
+            $('#paragrafo_enunciado').text(enunciadoCompleto);
+        }
+     });
+ });

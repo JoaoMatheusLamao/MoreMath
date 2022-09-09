@@ -1,3 +1,11 @@
+<?php
+
+require_once("configRestrit.php");
+session_start();
+$id_nivel = 2;
+$_SESSION['nível'] = $id_nivel;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -20,7 +28,7 @@
         <div class="centro">
             <div class="quadro_conta">
                 <div class="conta">
-                    <p>Joãozinho tem...</p>
+                    <p id="paragrafo_enunciado"></p>
                 </div>
                 <div class="form_resp">
                     <form method="post">
@@ -31,9 +39,11 @@
                 </div>
             </div>
             <form method="post">
-                <input type="submit" name="pulaEx" id="pulaEx" value="Pular exercício">
+                <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
             </form>
         </div>
     </main>
+    <script src="../assets/js/jqueryImport.js"></script>
+    <script src="js/scriptEx.js"></script>
 </body>
 </html>

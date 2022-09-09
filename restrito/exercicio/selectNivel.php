@@ -1,6 +1,4 @@
-<?php
 
-?>
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -23,7 +21,9 @@
             <div class="quadro" id="Quadro_1">
                 <div class="select_nivel" id="esquerda">
                     <p>Nível:</p>
-                    <a href="exercicioFx.php"><p>Fixação</p></a>   
+                    <form action="php/callFx.php">
+                        <input type="submit" value="Fixação">
+                    </form>  
                 </div>
             </div>
             <div class="quadro" id="Quadro_2">
