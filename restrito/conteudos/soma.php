@@ -14,9 +14,9 @@ $_SESSION['componente'] = $id_componente;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soma</title>
+    <title>Adição</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_soma.css">
+    <link rel="stylesheet" href="css/style_tela_conteudos.css">
     <!-- Menu Lateral Javascript -->
     <script language="javascript">
         visibilidade = 0
@@ -42,8 +42,8 @@ $_SESSION['componente'] = $id_componente;
             
             <div class="menu_lateral">
                 <div class="menu_lateral_andante">
-                    <div class="menu" id="menu_visbilidade" style="display: none;">      
-                        <a href="subtracao.php"><p id="subtracao">Subtração</p></a><br>
+                    <div class="menu" id="menu_visbilidade" style="display: none;">  <br>    
+                        <a href="subtracao.php" id="primeiro"><p id="subtracao">Subtração</p></a><br>
                         <a href="multiplicacao.php"><p id="multiplacao">Multiplicação</p></a> <br>
                         <a href="divisao.php"><p id="divisao">divisão</p></a> <br>
                         <a href="../exercicio/selectNivel.php"><p id="exercicios"> Exercícios </p></a> <br>
