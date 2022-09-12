@@ -16,7 +16,7 @@ $_SESSION['componente'] = $id_componente;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divisão</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_div.css">
+    <link rel="stylesheet" href="css/style_tela_conteudos.css">
 
     <!-- Menu Lateral Javascript -->
     <script language="javascript">
@@ -43,8 +43,8 @@ $_SESSION['componente'] = $id_componente;
             
             <div class="menu_lateral">
                 <div class="menu_lateral_andante">
-                    <div class="menu" id="menu_visbilidade" style="display: none;">      
-                        <a href="soma.php"><p id="soma">Soma</p></a> <br>
+                    <div class="menu" id="menu_visbilidade" style="display: none;">  <br>    
+                        <a href="soma.php" id="primeiro"><p id="soma">Adição</p></a> <br>
                         <a href="subtracao.php"><p id="subtracao">Subtração</p></a><br>
                         <a href="multiplicacao.php"><p id="multiplacao">Multiplicação</p></a> <br>
                         <a href="../exercicio/selectNivel.php"><p id="exercicios"> Exercícios </p></a> <br>
@@ -60,7 +60,7 @@ $_SESSION['componente'] = $id_componente;
             </div>
 
             <div class="conteudos_bloco">
-                <div class="titulo_conteudo"> <p id="texto_titulo">  Divisão </p></div>
+                <div class="titulo_conteudo"><p id="texto_titulo">Divisão</p></div>
                 <div class="Corpo_conteudo">
                     <p id="conteudo_texto"> Conteudo Pertinente </p> 
                 </div>
