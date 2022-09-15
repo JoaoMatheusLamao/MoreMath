@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_menu_ex.css">
+    <link rel="stylesheet" href="css/style_ex.css">
 
     <title>Escolha um nível</title>
 </head>
@@ -28,7 +28,7 @@
         <div class="quadro" id="Quadro_2">
             <div class="select_nivel" id="direita">
                 <p>Nível :</p>
-                <form action="php/callFx.php">
+                <form action="php/callAp.php">
                     <input type="submit" value="Aprofundamento">
                 </form>  
             </div>

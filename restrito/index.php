@@ -11,9 +11,9 @@ session_start();
 $usuario = new UsuarioOk();
 
 //var_dump($_SESSION['token']);
-//if (!$usuario->autenticar($_SESSION['token'])) {
-//    header('location: ../index.php');
-//}
+if (!$usuario->autenticar($_SESSION['token'])) {
+    header('location: ../index.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ $usuario = new UsuarioOk();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livrinhos.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -65,7 +65,12 @@ $usuario = new UsuarioOk();
         <!-- display flutuante que forma a tela de perfil-->
             <div id="invisivel" style="visibility: hidden;">
                 <div class="display_flutuante">
-                    <div class="imagem"> <img src="css/img/Coruja.png"></div>
+                    <div class="imagem">
+                        <img src="css/img/Coruja.png">
+                        <div class="botoes_saida">
+                            <form action="logout.php"><input id="bt_sair" type="submit" value="Sair"></form>
+                        </div>
+                    </div>
                     <div class="usuario">
                         <div class="nome_usuario"><p>  <?php if(isset($_SESSION['nome_usuario'])) {echo ucfirst($_SESSION['nome_usuario']);}?>  </p></div>
                         <div class="dados_usuario">
@@ -78,9 +83,6 @@ $usuario = new UsuarioOk();
                             <div class="pai_dados">
                                 <p> <span class="esquerda"> Data de nascimento: </span> <span class="direita"><?php if(isset($_SESSION['data_nasc_usu'])) {echo $_SESSION['data_nasc_usu'];}?></span></p>
                             </div> 
-                            <div class="botoes_saida">
-                                <form action="logout.php"><input id="bt_sair" type="submit" value="Sair"></form>
-                            </div>
                         </div>
                     </div>
                 </div>
