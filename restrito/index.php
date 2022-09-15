@@ -11,9 +11,9 @@ session_start();
 $usuario = new UsuarioOk();
 
 //var_dump($_SESSION['token']);
-//if (!$usuario->autenticar($_SESSION['token'])) {
-//    header('location: ../index.php');
-//}
+if (!$usuario->autenticar($_SESSION['token'])) {
+    header('location: ../index.php');
+}
 ?>
 
 <!DOCTYPE html>
