@@ -1,5 +1,6 @@
 <?php
 
+
 class Exercicio{
 
     public $componente;
@@ -29,7 +30,7 @@ class Exercicio{
                     $this->setEnunciado($key['enunciado']);
                     $this->setRespCorreta($key['resposta_correta']);
                 } else {
-                    header("Refresh: 0");
+                    //header("Refresh: 0");
                 }
             }
         }
@@ -43,7 +44,15 @@ class Exercicio{
             ':idEx' => $idEx
         ));
         if (empty($exJaFeito)) {
-            //se esta vazio é pq o usuario n respondeu esse exercicio ainda
+            //se esta vazio é pq o usuario n respondeu esse exercicio ainda - verificar se o usuario ja respondeu todos
+
+//TENHO QUE TERMINAR A VERIFICAÇÃO DE SE O USUARIO JA RESPONDEU TODOS OS EX
+
+            $exFeito = $objSql->exComand("select*from resposta_usuario where id_usuario = :idUsu and status_resposta = 1 and id_tipo_exercicio = :idTipo", array(
+                ':idUsu' => $_SESSION['id_usuario'],
+                ':idTipo' => $_SESSION['id_tipo_exercicio']
+            ));
+
             return true;
         } else {
             //se esta preenchido, o usuario ja respondeu corretamente o exercicio
@@ -59,6 +68,7 @@ class Exercicio{
             ':idComp' => $this->componente,
             ':idNivel' => $this->nivel));
         foreach ($id_tipo as $key) {
+            $_SESSION['id_tipo_exercicio'] = $key['id_tipo_exercicio'];
             return $key['id_tipo_exercicio'];
         }
     }
@@ -99,6 +109,7 @@ class Exercicio{
         return $this->respCorreta;
     }
 
+
     //funçao que corrige o exercicio
     public function corrigeEx($respUs)
     {
@@ -116,11 +127,12 @@ class Exercicio{
     public function armazenaResp($respUs, $statusResp)
     {
         $sql = new Sql();
-        $sql->exComand("insert into resposta_usuario (status_resposta, resposta_usuario, id_exercicio, id_usuario) values (:stRsp, :rspUsu, :idEx, :idUsu)", array(
+        $sql->exComand("insert into resposta_usuario (status_resposta, resposta_usuario, id_exercicio, id_usuario, id_tipo_exercicio) values (:stRsp, :rspUsu, :idEx, :idUsu, :idTipo)", array(
             ':stRsp'=>$statusResp,
             ':rspUsu'=>$respUs,
             ':idEx'=>$_SESSION['idExercicio'],
-            ':idUsu'=>$_SESSION['id_usuario']
+            ':idUsu'=>$_SESSION['id_usuario'],
+            ':idTipo'=>$_SESSION['id_tipo_exercicio']
         ));
     }
 }

@@ -27,9 +27,7 @@ $(document).ready(function(){
         method: 'POST',
         dataType: 'json'
     }).done(function(enunciado){
-        if (enunciado === "") {
-            location.reload(true);
-        } else{
+        if (enunciado !== "") {
             var enunciadoCompleto = enunciado + "=";
             $('#paragrafo_enunciado').text(enunciadoCompleto);
         }
