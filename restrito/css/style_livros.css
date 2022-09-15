@@ -13,17 +13,18 @@ body{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position-x: 52%;
-    background-position-y: -99%;
+    background-position-y: -30%;
     font-family: 'DynaPuff', cursive;
     display: flex;
     flex-direction: column;
-    width: 170h;
+    width: 198vh;
     height: 100vh;
+    justify-content: space-between;
     
 }
 
 /* Cabeçario com os 3 botoes principais */
-header{
+.cabecario{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -31,6 +32,8 @@ header{
     background-color: rgb(200, 200, 255);
     border-style: solid;
     border-color: black;
+    padding-top: 1%;
+    border-top: none;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
 }
@@ -68,7 +71,7 @@ main{
     flex-direction: row;
     background-color: burlywood;
     width: 50%;
-    height: 200px;
+    height: 220px;
     margin-top: -5.5%;
     margin-bottom: 2%;
     margin-left: 38%;
@@ -81,15 +84,16 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 30%;
 }
 .imagem img{
     width: 60%;
 }
 .usuario{
-    width: 70%;
+    width: 100%;
     padding-top: 5%;
-    background-color: rgba(208, 176, 134, 0.356);
+    background-color: rgba(172, 144, 107, 0.356);
 }
 .nome_usuario p {
     text-align: center;
@@ -128,15 +132,14 @@ main{
     padding-bottom: 2%;
     width: 10%;
 }
+
 /* Botões */
 .botoes_saida{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
-    width: 15%;
-    height: auto;
+    width: 85px;
+    margin-top: 8%;
+    height: 30px;
 }
+
 #bt_sair{
     height: 15%;
     width: 85%;
@@ -147,31 +150,11 @@ main{
     margin-left: 5%;
     margin-top: 3%;
     margin-bottom: 2%;
-    transition: 0.5s;
+
 }
+
 #bt_sair:hover{
-    height: 15%;
-    width: 90%;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(73, 194, 255);
-    border-style: dashed;
-    margin-top: 3%;
-    margin-bottom: 2%;
-}
-
-#bt_quem_somos{
-    height: 15%;
-    width: 85%;
-    border-radius: 10px;
-    border-color: rgb(0, 0, 0);
-    background-color: rgb(209, 240, 255);
-    border-style: solid;
-    margin-left: 5%;
-    margin-top: 3%;
-    margin-bottom: 2%;
     transition: 0.5s;
-}
-#bt_quem_somos:hover{
     height: 15%;
     width: 90%;
     border-color: rgb(0, 0, 0);
@@ -180,8 +163,6 @@ main{
     margin-top: 3%;
     margin-bottom: 2%;
 }
-
-
 
 .esquerda{
     font-size: 110%;
@@ -191,11 +172,13 @@ main{
     padding-right: 3%;
 }
 
+/* Swiper Cpmteudo do swiper com os livrinhos */
+.bloco_do_swiper{
+    margin-top: -7%;
+}
 .img_livros_swipe{
     width: 45%;
 }
-
-
 
 .swiper {
     width: 30%;
@@ -223,4 +206,52 @@ main{
 .swiper-slide img{
     width: 75%;
     padding-bottom: 10%;
+}
+
+
+/*Rodapé*/
+
+footer{
+    display: flex;
+    align-self: center;
+    justify-self: end;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+#texto_bt_quem_somos{
+    font-size: 90%;
+    color: #000000;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#bt_quem_somos{
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+    height: auto;
+    width: 20%;
+
+    text-align: center;
+    text-decoration: none;
+
+
+    border-radius: 10px;
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(209, 240, 255);
+    border-style: solid;
+}
+#bt_quem_somos:hover{
+    transition: 0.5s;
+
+    width: 25%;
+
+    border-color: rgb(0, 0, 0);
+    background-color: rgb(73, 194, 255);
+    border-style: dashed;
+}
+#texto_bt_quem_somos:hover{
+    color: aliceblue;
+    font-size: 110;
 }

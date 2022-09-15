@@ -24,9 +24,9 @@
             <p id="texto"> O tema do site foi decidido após uma série de pesquisas e reuniões. O projeto tem como foco auxiliar a aprendizagem da matemática básica, utilizando elementos da gamificação durante sua explanação.</p><br>
             <p id="texto"> Os alunos responsáveis pela criação do site são: </p><br>
                 <ul>
-                    <li id="nomes"> João Matheus Aparecido Lamão → lindo</li>
-                    <li id="nomes"> Kaique Vinicius Silva → Gostoso</li>
-                    <li id="nomes"> Sâmara Cristina Miranda Antunes → Genial </li>
+                    <li id="nomes"> João Matheus Aparecido Lamão</li>
+                    <li id="nomes"> Kaique Vinicius Silva</li>
+                    <li id="nomes"> Sâmara Cristina Miranda Antunes</li>
                     <li id="nomes"> Vitor Hugo Fernandes de Campos</li>
                 </ul><br>
             <p id="texto">Os créditos da criação e desenvolvimento, são inteiramente de propriedade dos mesmos.</p><br>
