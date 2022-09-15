@@ -51,6 +51,14 @@ class Usuario
             if ($this->senha !== $this->confirmaSenha) {
                 throw new Exception("Senha e confirmação de senha não coincidem!", 4);
             }
+            if(isset($this->telefone)){
+                $telFiltrado = $this->filtroTel($this->telefone);
+                foreach ($telFiltrado as $key => $value) {
+                    if($value != 9){
+                        throw new Exception("Telefone inválido, por favor tente novamente.", 5);
+                    }
+                }
+            }
         } catch (Exception $erro) {
             //colocando os erros dentro do array errosForm
             array_push($this->errosForm, array($erro->getCode() => $erro->getMessage()));
