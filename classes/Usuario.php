@@ -54,7 +54,7 @@ class Usuario
             if(isset($this->telefone)){
                 $telFiltrado = $this->filtroTel($this->telefone);
                 foreach ($telFiltrado as $key => $value) {
-                    if($value != 9){
+                    if(strlen($value) != 9){
                         throw new Exception("Telefone inválido, por favor tente novamente.", 5);
                     }
                 }

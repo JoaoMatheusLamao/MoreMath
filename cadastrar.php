@@ -18,7 +18,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
         $objUsu->cadastrar();
         $errinhos = $objUsu->trataErroCadastro();
         if (empty($errinhos)) {
-            //header('location: index.php');
+            header('location: index.php');
         }
         //$errinhos[codErro][value]
     }
