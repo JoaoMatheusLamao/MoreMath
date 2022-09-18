@@ -1,3 +1,8 @@
+<?php
+session_start();
+require_once("configRestrit.php");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
