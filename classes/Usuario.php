@@ -95,6 +95,10 @@ class Usuario
                         ':numero' => $value,
                         ':id_usu' => $this->id_usu
                     ));
+                $objSql->exComand("insert into pontuacao (total_pontos, id_usuario) values (:totalPt, :id_usu)", array(
+                    ':totalPt' => 0,
+                    ':id_usu' => $this->id_usu
+                ));
                 }
             } else {
                 throw new Exception("Email já está sendo utilizado!", 5);
