@@ -5,6 +5,8 @@ class Exercicio{
 
     public $componente;
     public $nivel;
+
+    public $totalEx;
     public $idExercicio;
     public $enunciado;
     public $respCorreta;
@@ -15,49 +17,36 @@ class Exercicio{
 
         //selecionano tipo de exercicio que o usuario quer
         $tipo = $this->selectTipo();
+        
+        $this->setTotalEx($tipo);
 
         //pega um exercicio do banco
         $exercicio = new Sql();
         $ex = $exercicio->exComand("select*from exercicio where id_tipo_exercicio = :idTipo order by rand() limit 1", array(
             ':idTipo' => $tipo));
-            //extrai do array
+        
         foreach ($ex as $key) {
-            //se o array vier vazio, n pegou nada do banco
-            if (!empty($key)) {
-                //se o usuario ja fez esse exercicio, a página é recarregada
-                if ($this->noRepeatEx($key['id_exercicio']) == true) {
-                    $this->setIdEx($key['id_exercicio']);
-                    $this->setEnunciado($key['enunciado']);
-                    $this->setRespCorreta($key['resposta_correta']);
-                } else {
-                    //header("Refresh: 0");
-                }
-            }
         }
-    }
 
-    public function noRepeatEx($idEx)
-    {
-        $objSql = new Sql();
-        $exJaFeito = $objSql->exComand("select*from resposta_usuario where id_usuario = :idUsu and id_exercicio = :idEx and status_resposta = 1", array(
-            ':idUsu' => $_SESSION['id_usuario'],
-            ':idEx' => $idEx
-        ));
-        if (empty($exJaFeito)) {
-            //se esta vazio é pq o usuario n respondeu esse exercicio ainda - verificar se o usuario ja respondeu todos
+        //usuario ja fez o exercicio corretamente?
+        $jaFez = $this->exJaFeito($_SESSION['id_usuario'], $key['id_exercicio']);
 
-//TENHO QUE TERMINAR A VERIFICAÇÃO DE SE O USUARIO JA RESPONDEU TODOS OS EX
-
-            $exFeito = $objSql->exComand("select*from resposta_usuario where id_usuario = :idUsu and status_resposta = 1 and id_tipo_exercicio = :idTipo", array(
-                ':idUsu' => $_SESSION['id_usuario'],
-                ':idTipo' => $_SESSION['id_tipo_exercicio']
-            ));
-
-            return true;
+        //se não, é mostrado ao usuario o exercicio para que ele responda
+        if ($jaFez == false) {
+            $this->setIdEx($key['id_exercicio']);
+            $this->setEnunciado($key['enunciado']);
+            $this->setRespCorreta($key['resposta_correta']);
         } else {
-            //se esta preenchido, o usuario ja respondeu corretamente o exercicio
-            return false;
-        }
+            //se sim, é verificado se ele ja respondeu todos os exercicios desse tipo
+            $numExOk = $this->usuAllEx($_SESSION['id_usuario'], $tipo);
+            if ($this->getTotalEx() !== $numExOk) {
+                //se o usuario ainda não respondeu todos os ex, a pagina é recarregada e outro exercicios é puxado
+                $this->setEnunciado("");
+            } elseif ($this->getTotalEx() === $numExOk) {
+                //se ja respondeu todos os ex, no javascript é colocado uma msg avisando q os exercicios acabaram
+                $this->setEnunciado("Parece que você fez todos os exercícios! Parabéns!!!");
+            }
+        }    
     }
 
     //função para pegar o tipo de exercicio que o usuario quer
@@ -71,6 +60,77 @@ class Exercicio{
             $_SESSION['id_tipo_exercicio'] = $key['id_tipo_exercicio'];
             return $key['id_tipo_exercicio'];
         }
+    }
+
+    //funcao q verifica quantos exercicios existem daquele tipo
+    public function setTotalEx($tpEx)
+    {
+        $obj = new Sql();
+        $total = $obj->exComand("select id_exercicio from exercicio where id_tipo_exercicio = :idTipo", array(
+            ':idTipo' => $tpEx
+        ));
+        $totalNum = count($total);
+        $this->totalEx =  $totalNum;
+    }
+    //funcao get para pegar o numero total de exercicios daquele tipo
+    public function getTotalEx()
+    {
+        return $this->totalEx;
+    }
+
+    public function exJaFeito($idUsu, $idEx)
+    {
+        //busca no banco se o usuario ja respondeu corretamente aquele ex
+        $obj = new Sql();
+        $jaResp = $obj->exComand("select id_resposta_usuario from resposta_usuario where id_usuario = :idUsu and id_exercicio = :idEx and status_resposta = 1", array(
+            ':idUsu'=>$idUsu,
+            ':idEx'=>$idEx
+        ));
+        if (empty($jaResp)) {
+            //se estiver vazio, o usuario ainda não respondeu corretamente
+            return false;   
+        } else {
+            //se não estiver vazio é pq o usuario ja respondeu corretamente o exercicio
+            return true;
+        }
+    }
+
+    //função q retorna o tatal de exercicios de UM determinado tipo feitos corretamente pelo usuario
+    public function usuAllEx($idUsu, $idTpEx)
+    {
+        $obj = new Sql;
+        $allExUsu = $obj->exComand("select id_resposta_usuario from resposta_usuario where id_usuario = :idUsu and id_tipo_exercicio = :idTpEx and status_resposta = 1", array(
+            ':idUsu'=>$idUsu,
+            ':idTpEx'=>$idTpEx
+        ));
+        $numAllExUsu = count($allExUsu);
+        return $numAllExUsu;
+    }
+
+    //funçao que corrige o exercicio
+    public function corrigeEx($respUs)
+    {
+        if ($respUs == $_SESSION['respostaCorreta']) {
+            $statusResp = true;
+        } else {
+            $statusResp = false;
+        }
+        $this->armazenaResp($respUs, $statusResp);
+        return $statusResp;
+    }
+
+
+    //funçao que armazena a resposta do usuario
+    public function armazenaResp($respUs, $statusResp)
+    {
+        $sql = new Sql();
+        $sql->exComand("insert into resposta_usuario (status_resposta, resposta_usuario, id_exercicio, id_usuario, id_tipo_exercicio) values (:stRsp, :rspUsu, :idEx, :idUsu, :idTipo)", array(
+            ':stRsp'=>$statusResp,
+            ':rspUsu'=>$respUs,
+            ':idEx'=>$_SESSION['idExercicio'],
+            ':idUsu'=>$_SESSION['id_usuario'],
+            ':idTipo'=>$_SESSION['id_tipo_exercicio']
+        ));
     }
 
     //setando id do exercicio
@@ -107,33 +167,7 @@ class Exercicio{
     public function getRespCorreta()
     {
         return $this->respCorreta;
-    }
-
-
-    //funçao que corrige o exercicio
-    public function corrigeEx($respUs)
-    {
-        if ($respUs == $_SESSION['respostaCorreta']) {
-            $statusResp = true;
-        } else {
-            $statusResp = false;
-        }
-        $this->armazenaResp($respUs, $statusResp);
-        return $statusResp;
-    }
-
-
-    //funçao que armazena a resposta do usuario
-    public function armazenaResp($respUs, $statusResp)
-    {
-        $sql = new Sql();
-        $sql->exComand("insert into resposta_usuario (status_resposta, resposta_usuario, id_exercicio, id_usuario, id_tipo_exercicio) values (:stRsp, :rspUsu, :idEx, :idUsu, :idTipo)", array(
-            ':stRsp'=>$statusResp,
-            ':rspUsu'=>$respUs,
-            ':idEx'=>$_SESSION['idExercicio'],
-            ':idUsu'=>$_SESSION['id_usuario'],
-            ':idTipo'=>$_SESSION['id_tipo_exercicio']
-        ));
+    
     }
 }
 ?>
