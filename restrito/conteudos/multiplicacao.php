@@ -45,7 +45,7 @@ $_SESSION['componente'] = $id_componente;
                         <br>        
                         <a href="soma.php"><p id="soma">Adição</p></a> <br>
                         <a href="subtracao.php"><p id="subtracao">Subtração</p></a><br>
-                        <a href="divisao.php"><p id="divisao">divisão</p></a> <br>
+                        <a href="divisao.php"><p id="divisao">Divisão</p></a> <br>
                         <a href="../exercicio/selectNivel.php"><p id="exercicios"> Exercícios </p></a> <br>
                     </div>
                     <div class="bt_lateral">
