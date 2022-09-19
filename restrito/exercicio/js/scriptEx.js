@@ -28,7 +28,6 @@ $(document).ready(function(){
         dataType: 'json'
     }).done(function(enunciado){
         if (enunciado !== "") {
-            console.log("ola");
             var enunciadoCompleto = enunciado + "=";
             $('#paragrafo_enunciado').text(enunciadoCompleto);
         } else {

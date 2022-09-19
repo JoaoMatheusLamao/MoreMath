@@ -9,6 +9,6 @@ $puxaEx->puxaEx($_SESSION['nível'], $_SESSION['componente']);
 
 $enunciado = $puxaEx->getEnunciado();
 
-echo json_encode($enunciado);
+echo json_encode(utf8_encode($enunciado));
 
 ?>
