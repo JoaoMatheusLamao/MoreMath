@@ -27,23 +27,23 @@ require_once("configRestrit.php");
                 <div class="conta">
                     <p id="paragrafo_enunciado">
                         
-                    </p>
+                        </p>
+                    </div>
+                    <div class="form_resp">
+                        <form id="formResposta" method="post">
+                            <label for="inpResposta">R:</label>
+                            <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
+                            <input type="submit" value="Responder" id="btnEnvia" class="input">
+                        </form>
+                    </div>
+                    <span><p class="status"></p></span>
                 </div>
-                <div class="form_resp">
-                    <form id="formResposta" method="post">
-                        <label for="inpResposta">R:</label>
-                        <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
-                        <input type="submit" value="Responder" id="btnEnvia" class="input">
-                    </form>
-                </div>
-                <span><p class="status"></p></span>
+                <form action="" method="post">
+                    <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
+                </form>
             </div>
-            <form action="" method="post">
-                <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
-            </form>
-        </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptEx.js"></script>
+    <script src="js/scriptExFx.js"></script>
 </body>
 </html>

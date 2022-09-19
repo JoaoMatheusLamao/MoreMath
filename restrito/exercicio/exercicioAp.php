@@ -45,6 +45,6 @@ $_SESSION['nível'] = $id_nivel;
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptEx.js"></script>
+    <script src="js/scriptExAp.js"></script>
 </body>
 </html>
