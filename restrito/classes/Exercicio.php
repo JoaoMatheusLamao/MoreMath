@@ -108,15 +108,34 @@ class Exercicio{
     }
 
     //funçao que corrige o exercicio
-    public function corrigeEx($respUs)
+    public function corrigeEx($respUs, $pontos)
     {
         if ($respUs == $_SESSION['respostaCorreta']) {
             $statusResp = true;
+            //$this->updatePont($_SESSION['id_usuario'], $pontos);
         } else {
             $statusResp = false;
         }
         $this->armazenaResp($respUs, $statusResp);
         return $statusResp;
+    }
+
+
+    //funcao q atualiza os pontos no banco
+    public function updatePont($idUsu, $pontos)
+    {
+        $obj = new Sql();
+        $pontEx = $obj->exComand("select total_pontos from pontuacao where id_usuario = :idUsu", array(
+            ':idUsu' => $idUsu
+        ));
+        foreach ($pontEx as $key) {
+            # code...
+        }
+        $novaPont = $key['total_pontos'] + $pontos;
+        $obj->exComand("update pontuacao set total_pontos = :totalPt where id_usuario = :idUsu", array(
+            'totalPt' => $novaPont,
+            ':idUsu'=> $idUsu
+        ));
     }
 
 
