@@ -112,7 +112,7 @@ class Exercicio{
     {
         if ($respUs == $_SESSION['respostaCorreta']) {
             $statusResp = true;
-            //$this->updatePont($_SESSION['id_usuario'], $pontos);
+            $this->updatePont($_SESSION['id_usuario'], $pontos);
         } else {
             $statusResp = false;
         }
