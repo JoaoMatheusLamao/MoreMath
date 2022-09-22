@@ -8,6 +8,6 @@ require_once("configRestrit.php");
 $respUsu = $_POST['resposta'];
 
 $corrige = new Exercicio();
-$statusResp = $corrige->corrigeEx($respUsu);
+$statusResp = $corrige->corrigeEx($respUsu, $_SESSION['pontos']);
 echo json_encode($statusResp);
 ?>
