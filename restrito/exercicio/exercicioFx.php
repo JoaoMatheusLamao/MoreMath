@@ -11,7 +11,7 @@ require_once("configRestrit.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_exerciciosFx.css">
+    <link rel="stylesheet" href="css/style_exerciciosFx2.css">
 
     <title>Exercícios</title>
 </head>
@@ -38,9 +38,13 @@ require_once("configRestrit.php");
                     </div>
                     <span><p class="status"></p></span>
                 </div>
-                <form action="" method="post">
-                    <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
-                </form>
+                <div class="trilho_inferior">
+                    <form method="post">
+                        <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
+                    </form>
+                    <div class="bt_voltar_div"> <a href="selectNivel.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div>  
+                </div>
+                
             </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>

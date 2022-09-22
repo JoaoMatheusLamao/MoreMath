@@ -27,7 +27,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acesse o MoreMath</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="css/style_log.css">
+    <link rel="stylesheet" type="text/css" href="css/style_log2.css">
 </head>
 
 <body>
@@ -40,7 +40,7 @@ if (isset($_POST['email']) && isset($_POST['senha']) && !empty($_POST['email']) 
                 <form method="post">
                     <div id="grupo_1">
                         <label for="email">Email:</label><br>
-                        <input type="email" name="email" id="email" <?php if(isset($_POST['email'])){echo 'value="'.$_POST['email'].'"';}?> placeholder="Digite seu melhor email!"><br>
+                        <input type="email" name="email" id="email" <?php if(isset($_POST['email'])){echo 'value="'.$_POST['email'].'"';}?> placeholder="Digite seu melhor email"><br>
                     </div>
                     <div id="grupo_2">
                         <label for="email">Senha:</label><br>

@@ -67,7 +67,7 @@ if (isset($_POST['nomeUsuario']) && isset($_POST['telefone']) && isset($_POST['e
                         </div>
                         <div class="label_input">
                             <label for="email">Email</label><br>
-                            <input type="email" name="email" id="email" <?php if(isset($_POST['email'])){echo 'value="'.$_POST['email'].'"';}?> placeholder="Digite seu melhor email!" required><br>
+                            <input type="email" name="email" id="email" <?php if(isset($_POST['email'])){echo 'value="'.$_POST['email'].'"';}?> placeholder="Digite seu melhor email" required><br>
                         </div>
                         <div class="label_input">
                             <label for="senha">Senha</label><br>

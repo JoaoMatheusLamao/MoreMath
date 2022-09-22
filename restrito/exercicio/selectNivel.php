@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex.css">
+    <link rel="stylesheet" href="css/style_ex2.css">
 
     <title>Escolha um nível</title>
 </head>
@@ -24,6 +24,7 @@
                     <input type="submit" value="Fixação">
                 </form>  
             </div>
+            <div class="bt_voltar_div"> <a href="../index.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div>  
         </div>
         <div class="quadro" id="Quadro_2">
             <div class="select_nivel" id="direita">
