@@ -1,8 +1,6 @@
 <?php
 session_start();
 require_once("configRestrit.php");
-$pont = new Pontuacao();
-$pont_total = $pont->puxaPont($_SESSION['id_usuario']);
 ?>
 
 <!DOCTYPE html>
@@ -13,7 +11,7 @@ $pont_total = $pont->puxaPont($_SESSION['id_usuario']);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_Fx3.css">
+    <link rel="stylesheet" href="css/style_ex_Fx4.css">
 
     <title>Exercícios</title>
 </head>
@@ -24,12 +22,8 @@ $pont_total = $pont->puxaPont($_SESSION['id_usuario']);
                 <h1 id="titulo">Resolva</h1>
             </div>
             <div class="pontos">
-                <h1 id="titulo">Pontuação: 
-                    <?php 
-                echo $pont_total;
-                ?>
-            </h1>
-            <img src="css/img/medalha.png">
+                <h1 id="pontos"></h1>
+                <img src="css/img/medalha.png">
             </div>
         </div>
         <div class="centro">
@@ -58,6 +52,6 @@ $pont_total = $pont->puxaPont($_SESSION['id_usuario']);
             </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExFx.js"></script>
+    <script src="js/scriptExFx2.js"></script>
 </body>
 </html>
