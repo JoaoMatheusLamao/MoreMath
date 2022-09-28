@@ -37,38 +37,37 @@ $_SESSION['componente'] = $id_componente;
 
 </head> 
 <body>
-
     <main>
         <div class="conteudo">
-            
             <div class="menu_lateral">
                 <div class="menu_lateral_andante">
                     <div class="menu" id="menu_visbilidade" style="display: none;">  <br>    
                         <a href="soma.php" id="primeiro"><p id="soma">Adição</p></a> <br>
                         <a href="subtracao.php"><p id="subtracao">Subtração</p></a><br>
                         <a href="multiplicacao.php"><p id="multiplacao">Multiplicação</p></a> <br>
-                        <a href="../exercicio/selectNivel.php"><p id="exercicios"> Exercícios </p></a> <br>
+                        <img src="css/img/Coruja.png" width="70%">
                     </div>
                     <div class="bt_lateral">
                         <a href="javascript:void(esconde_div())"><img src="css/img/bt_menu.png" alt=""></a>
                     </div>
-                    
-
                 </div>
                 
-                <div class="bt_voltar_div"> <a href="../index.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div>  
+                <div class="bt_voltar_div"> <a href="../index.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div> 
+
             </div>
 
             <div class="conteudos_bloco">
                 <div class="titulo_conteudo"><p id="texto_titulo">Divisão</p></div>
                 <div class="Corpo_conteudo">
-                    <p id="conteudo_texto"> Conteudo Pertinente </p> 
+                    <iframe src="css/docs/divisao.html" id="corpo">
+                    </iframe>
                 </div>
                 
                 
             </div>
+
+            <div class="Div_bt_exercicios"> <a href="../exercicio/selectNivel.php" id="img_voltar"><img src="css/img/bt_exercicio.png" width="80%" id="img_bt_exercicio"></a><br></div>
         </div>
     </main>
-
 </body>
 </html>
