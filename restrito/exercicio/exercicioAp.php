@@ -1,9 +1,6 @@
 <?php
-
 require_once("configRestrit.php");
 session_start();
-$id_nivel = 2;
-$_SESSION['nível'] = $id_nivel;
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +11,7 @@ $_SESSION['nível'] = $id_nivel;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_exercicioAp2.css">
+    <link rel="stylesheet" href="css/style_ex_Ap4.css">
 
     <title>Exercícios</title>
 </head>
@@ -23,6 +20,10 @@ $_SESSION['nível'] = $id_nivel;
         <div class="trilho_titulo">
             <div class="titulo">
                 <h1 id="titulo">Resolva</h1>
+            </div>
+            <div class="pontos">
+            <h1 id="pontos"></h1>
+            <img src="css/img/medalha.png">
             </div>
         </div>
         <div class="centro">
@@ -48,6 +49,6 @@ $_SESSION['nível'] = $id_nivel;
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExAp.js"></script>
+    <script src="js/scriptExAp2.js"></script>
 </body>
 </html>

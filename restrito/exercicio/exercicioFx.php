@@ -11,7 +11,7 @@ require_once("configRestrit.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_exerciciosFx2.css">
+    <link rel="stylesheet" href="css/style_ex_Fx4.css">
 
     <title>Exercícios</title>
 </head>
@@ -20,6 +20,10 @@ require_once("configRestrit.php");
         <div class="trilho_titulo">
             <div class="titulo">
                 <h1 id="titulo">Resolva</h1>
+            </div>
+            <div class="pontos">
+                <h1 id="pontos"></h1>
+                <img src="css/img/medalha.png">
             </div>
         </div>
         <div class="centro">
@@ -48,6 +52,6 @@ require_once("configRestrit.php");
             </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExFx.js"></script>
+    <script src="js/scriptExFx2.js"></script>
 </body>
 </html>
