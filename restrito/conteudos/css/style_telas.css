@@ -73,7 +73,7 @@ main{
 }
 
 .menu{
-    background-color: #bdb8ce;
+    background-color: #aed1ff;
     width: 80%;
     margin-top: 2%;
     border: 3px solid black;
@@ -89,7 +89,7 @@ main{
     width: 30%;
     height: 45%;
     margin-left: -3px;
-    background-color: #baafdd;
+    background-color: #aed1ff;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
     border: solid 3px black;
@@ -106,11 +106,13 @@ main{
 
 #soma, #divisao, #subtracao, #multiplacao{
     padding: 2px;
-    background-color: rgb(207, 171, 240);
+    background-color: rgb(170, 170, 170);
     border: 1.5px solid black;
     margin-top: 15px;
+    margin-left: 2%;
     width: 80%;
     font-size: 110%;
+    border-radius: 20px;
 }
 a #soma, a #divisao, a #subtracao, a #multiplacao{
     text-decoration: none;

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$id_componente = 4;
+$id_componente = 1;
 if (isset($_SESSION['componente']) && $_SESSION['componente'] != $id_componente) {
     $_SESSION['componente'] = $id_componente;
 }
@@ -9,36 +9,38 @@ $_SESSION['componente'] = $id_componente;
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="ptbr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Divisão</title>
     <link rel="shortcut icon" href="css/img/coruja.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/style_tela_conteudos.css">
-
+    <link rel="stylesheet" href="css/style_telas.css">
     <!-- Menu Lateral Javascript -->
     <script language="javascript">
         visibilidade = 0
 
-        function esconde_div(){
-            if (visibilidade == 0){
-                document.getElementById("menu_visbilidade").style.display=""
+        function esconde_div() {
+            if (visibilidade == 0) {
+                document.getElementById("menu_visbilidade").style.display = ""
                 visibilidade++
-            }
-            else{
-                document.getElementById("menu_visbilidade").style.display="none"
+            } else {
+                document.getElementById("menu_visbilidade").style.display = "none"
                 visibilidade = 0
             }
         }
     </script>
     <!-- Fim do menu lateral -->
 
-</head> 
+</head>
+
 <body>
+
     <main>
         <div class="conteudo">
+
             <div class="menu_lateral">
                 <div class="menu_lateral_andante">
                     <div class="menu" id="menu_visbilidade" style="display: none;">  <br>    
@@ -57,7 +59,6 @@ $_SESSION['componente'] = $id_componente;
             </div>
 
             <div class="conteudos_bloco">
-                <div class="titulo_conteudo"><p id="texto_titulo">Divisão</p></div>
                 <div class="Corpo_conteudo">
                     <iframe src="css/docs/divisao.html" id="corpo">
                     </iframe>
@@ -68,6 +69,7 @@ $_SESSION['componente'] = $id_componente;
 
             <div class="Div_bt_exercicios"> <a href="../exercicio/selectNivel.php" id="img_voltar"><img src="css/img/bt_exercicio.png" width="80%" id="img_bt_exercicio"></a><br></div>
         </div>
-    </main>
+
 </body>
+
 </html>
