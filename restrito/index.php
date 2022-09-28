@@ -14,6 +14,11 @@ $usuario = new UsuarioOk();
 if (!$usuario->autenticar($_SESSION['token'])) {
     header('location: ../index.php');
 }
+
+$certo = Estatistica::puxaEstat($_SESSION['id_usuario'], 1);
+
+$errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
+
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +27,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livros2.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -82,6 +87,12 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                             </div> 
                             <div class="pai_dados">
                                 <p> <span class="esquerda"> Data de nascimento: </span> <span class="direita"><?php if(isset($_SESSION['data_nasc_usu'])) {echo $_SESSION['data_nasc_usu'];}?></span></p>
+                            </div> 
+                            <div class="pai_dados">
+                                <p> <span class="esquerda"> Exercícios corretos: </span> <span class="direita"><?php {echo $certo;}?></span></p>
+                            </div> 
+                            <div class="pai_dados">
+                                <p> <span class="esquerda"> Exercícios incorretos: </span> <span class="direita"><?php {echo $errado;}?></span></p>
                             </div> 
                         </div>
                     </div>
