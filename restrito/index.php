@@ -11,9 +11,9 @@ session_start();
 $usuario = new UsuarioOk();
 
 //var_dump($_SESSION['token']);
-if (!$usuario->autenticar($_SESSION['token'])) {
-    header('location: ../index.php');
-}
+//if (!$usuario->autenticar($_SESSION['token'])) {
+//    header('location: ../index.php');
+//}
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +22,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livrinhos.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
