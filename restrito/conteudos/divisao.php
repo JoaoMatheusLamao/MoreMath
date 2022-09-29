@@ -1,11 +1,17 @@
 <?php
 session_start();
-$id_componente = 1;
+
+require_once("configRestrit.php");
+
+$id_componente = 4;
 if (isset($_SESSION['componente']) && $_SESSION['componente'] != $id_componente) {
     $_SESSION['componente'] = $id_componente;
 }
 $_SESSION['componente'] = $id_componente;
 //var_dump($_SESSION['componente']);
+
+$conteudo = Conteudo::puxaCont($_SESSION['componente']);
+
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +66,7 @@ $_SESSION['componente'] = $id_componente;
 
             <div class="conteudos_bloco">
                 <div class="Corpo_conteudo">
-                    <iframe src="css/docs/divisao.html" id="corpo">
+                    <iframe src="<?php echo $conteudo?>" id="corpo">
                     </iframe>
                 </div>
                 

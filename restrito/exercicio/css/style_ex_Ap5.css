@@ -105,6 +105,10 @@ main{
     justify-content: center;
 }
 
+#paragrafo_enunciado{
+    width: 95%;
+}
+
 .conta p{
     font-size: 25pt;
     font-family: 'Sanchez', serif;
