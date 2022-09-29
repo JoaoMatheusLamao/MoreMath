@@ -106,9 +106,11 @@ main{
 }
 
 .conta p{
-    font-size: 25pt;
+    font-size: 70pt;
     font-family: 'Sanchez', serif;
-    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 span{
@@ -147,7 +149,6 @@ span p{
 .input{
     border-radius: 10px;
 }
-
 .trilho_inferior{
     width: 100%;
 }

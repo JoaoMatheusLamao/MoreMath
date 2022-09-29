@@ -11,7 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_Ap4.css">
+    <link rel="stylesheet" href="css/style_ex_Ap5.css">
 
     <title>Exercícios</title>
 </head>
@@ -49,6 +49,6 @@ session_start();
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExAp2.js"></script>
+    <script src="js/scriptExAp3.js"></script>
 </body>
 </html>
