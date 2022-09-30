@@ -28,10 +28,14 @@ main{
 
 .trilho_titulo{ 
     height: 17%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
 .titulo{
     background-color: #F6EFEF;
-    width: 23%;
+    width: 30%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -43,6 +47,25 @@ main{
     border-bottom-right-radius: 40px;
 }
 
+.pontos{
+    background-color: #F6EFEF;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid;
+    border-top: none;
+    border-right: none;
+    border-width: 3px;
+    border-bottom-left-radius: 40px;
+    font-size: 150%;
+}
+
+.pontos img{
+    margin-left: 30px;
+    height: 70%;
+}
 
 .centro{
     height: 83%;
@@ -84,9 +107,22 @@ main{
 }
 
 .conta p{
-    font-size: 25pt;
+    font-size: 70pt;
     font-family: 'Sanchez', serif;
-    text-align: justify;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+span{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+span p{
+    margin: 10px;
+    font-size: x-large;
 }
 
 #imgInterrog{
@@ -114,7 +150,6 @@ main{
 .input{
     border-radius: 10px;
 }
-
 .trilho_inferior{
     width: 100%;
 }
