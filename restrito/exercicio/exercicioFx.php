@@ -12,7 +12,7 @@ require_once("configRestrit.php");
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_Fx5.css">
+    <link rel="stylesheet" href="css/style_ex_Fx6.css">
 
     <title>Exercícios</title>
 </head>
