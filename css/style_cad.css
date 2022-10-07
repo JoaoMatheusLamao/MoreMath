@@ -20,13 +20,13 @@ body{
 .main{
     display: flex;
     width: 100%;
-    align-items: center;
+    height: 100%;
 }
 .quadro{
     display: flex;
     margin-left: 18.3%;
-    padding-top: 4%;
     width: 62.8%;
+    height: 80%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -34,36 +34,33 @@ body{
 }
 
 .logo_e_input{
-    padding-top: 1%;
     margin-left: 10%;
     display: flex;
     align-items: center;
     flex-direction: row;
     width: 100%;
-}
-.titulo{
-    margin-top: -2%;
-    padding-bottom: 0.5%;
+    height: 100%;
 }
 #texto_titulo{
     text-align: center;
     font-size: 40px;
     font-family: 'DynaPuff', cursive;
-    color: aliceblue;
+    color: rgb(255, 240, 240);
+    margin-top: 9%;
 }
 
 .dados_usuario{
     display: flex;
-    padding-top: 2%;
-    align-items: center;
+    align-items: flex-start;
     font-family: athiti;
     width: 60%;
+    height: 100%;
 }
 .entrada{
     text-align: center;
     margin-left: 18%;
     width: 60%;
-    right: 50%;
+    height: 90%;
     border-radius: 30px;
     border-color: rgb(255, 255, 255);
     border-width: 2px;

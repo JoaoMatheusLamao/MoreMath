@@ -27,7 +27,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livros2.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -61,11 +61,12 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
 <body>
 
 <!-- cabeçario com a logo, perfil, e nome da pagina  -->
+    <div id="locura">
     <header>
         <div class="cabecario">    
-        <div><p id="pag_nom"> Conteúdos </p></div>
-        <div><img src="css/img/Coruja.png" id="img" style="visibility: visible;"></div>
-        <div id="tela_perfil"><a href="javascript:void(esconde_div())"><img src="css/img/Usuario botão.png"> </a></div>
+            <div><p id="pag_nom"> Conteúdos </p></div>
+            <div><img src="css/img/Coruja.png" id="img" style="visibility: visible;"></div>
+            <div id="tela_perfil"><a href="javascript:void(esconde_div())"><img src="css/img/Usuario botão.png"> </a></div>
         </div>
         <!-- display flutuante que forma a tela de perfil-->
             <div id="invisivel" style="visibility: hidden;">
@@ -133,7 +134,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
             </script>
     </div>
 <!-- Fim livros -->
-
+</div>
 <!-- Rodapé -->
     <footer>
         <a href="sobre_nos.php" id="bt_quem_somos"> <p id="texto_bt_quem_somos"> Sobre nós </p></a>
