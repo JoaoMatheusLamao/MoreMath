@@ -1,6 +1,10 @@
 <?php
 session_start();
 require_once("configRestrit.php");
+$usuario = new UsuarioOk();
+if (!$usuario->autenticar($_SESSION['token'])) {
+    header('location: ../../index.php');
+}
 $id_componente = 3;
 if (isset($_SESSION['componente']) && $_SESSION['componente'] != $id_componente) {
     $_SESSION['componente'] = $id_componente;

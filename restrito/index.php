@@ -1,22 +1,15 @@
 <?php
-
-//falta terminar os dados no cadastro... tem que pegar o telefone
 //flags da sessao disponiveis:
 //$_SESSION['token'], $_SESSION['nome_usuario'], $_SESSION['data_nasc_usu'], $_SESSION['id_usuario']
 require_once("configRestrit.php");
 session_start();
 
-//var_dump($_SESSION['nome_usuario']);
-
 $usuario = new UsuarioOk();
-
-//var_dump($_SESSION['token']);
 if (!$usuario->autenticar($_SESSION['token'])) {
     header('location: ../index.php');
 }
 
 $certo = Estatistica::puxaEstat($_SESSION['id_usuario'], 1);
-
 $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
 
 ?>

@@ -3,6 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff&family=Rubik+Dirt&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap');
+
 
 *{
     margin: 0;
@@ -62,6 +64,11 @@ main{
     font-size: 150%;
 }
 
+#pontos{
+    font-family: 'Handlee', cursive;
+    font-size: 200%;
+}
+
 .pontos img{
     margin-left: 30px;
     height: 70%;
@@ -92,7 +99,7 @@ main{
 
 .quadro_conta{
     background-color: #F6EFEF;
-    height: 50%;
+    height: 65%;
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -160,15 +167,15 @@ span p{
 #inpResposta{
     width: 40%;
     height: 4vh;
+    text-align: center;
 }
 
 #inpResposta::placeholder{
     width: 100%;
-    padding-left: 10px;
 }
 
 #btnEnvia{
-    width: 15%;
+    width: 25%;
     height: 4vh;
     margin-left: 1vw;
     background-color: #7b7f8a;

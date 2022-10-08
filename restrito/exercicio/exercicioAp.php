@@ -1,6 +1,11 @@
 <?php
 require_once("configRestrit.php");
 session_start();
+
+$usuario = new UsuarioOk();
+if (!$usuario->autenticar($_SESSION['token'])) {
+    header('location: ../../index.php');
+}
 ?>
 
 <!DOCTYPE html>
