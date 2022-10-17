@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_Ap6.css">
+    <link rel="stylesheet" href="css/style_ex_Ap7.css">
 
     <title>Exercícios</title>
 </head>
@@ -36,14 +36,16 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 <div class="conta">
                     <p id="paragrafo_enunciado"></p>
                 </div>
-                <div class="form_resp">
-                    <form id="formResposta" method="post">
-                        <label for="inpResposta">R:</label>
-                        <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
-                        <input type="submit" value="Responder" id="btnEnvia" class="input">
-                    </form>
+                <div class="trilho_teste">
+                    <div class="form_resp">
+                        <form id="formResposta" method="post">
+                            <label for="inpResposta">R:</label>
+                            <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
+                            <input type="submit" value="Responder" id="btnEnvia" class="input">
+                        </form>
+                    </div>
+                    <span><p class="status"></p></span>
                 </div>
-                <span><p class="status"></p></span>
             </div>
             <div class="trilho_inferior">
                 <form method="post">
