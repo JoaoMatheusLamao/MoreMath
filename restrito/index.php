@@ -57,7 +57,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
     <div id="locura">
     <header>
         <div class="cabecario">    
-            <div><p id="pag_nom"> Conteúdos </p></div>
+            <div><p id="pag_nom"> More Math </p></div>
             <div><img src="css/img/Coruja.png" id="img" style="visibility: visible;"></div>
             <div id="tela_perfil"><a href="javascript:void(esconde_div())"><img src="css/img/Usuario botão.png"> </a></div>
         </div>
