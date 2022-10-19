@@ -41,6 +41,12 @@ $conteudo = Conteudo::puxaCont($_SESSION['componente']);
                 visibilidade = 0
             }
         }
+
+        var i = setInterval(function () {
+        clearInterval(i);
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("conteudo_pdf").style.display = "flex";
+        }, 1000);
     </script>
     <!-- Fim do menu lateral -->
 
@@ -63,15 +69,26 @@ $conteudo = Conteudo::puxaCont($_SESSION['componente']);
                         <a href="javascript:void(esconde_div())"><img src="css/img/bt_menu.png" alt=""></a>
                     </div>
                 </div>
-                
                 <div class="bt_voltar_div"> <a href="../index.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div> 
-
             </div>
 
             <div class="conteudos_bloco">
                 <div class="Corpo_conteudo">
-                    <iframe src="<?php echo $conteudo?>" id="corpo">
-                    </iframe>
+                    <div id="loading" style="display: flex"> <img src="css/img/loading.gif"> </div>
+                    <div id="conteudo_pdf" style="display: none">
+                        <img src="docs/adicao/adicao1.png"><br>
+                        <img src="docs/adicao/adicao2.png"><br>
+                        <img src="docs/adicao/adicao3.png"><br>
+                        <img src="docs/adicao/adicao4.png"><br>
+                        <img src="docs/adicao/adicao5.png"><br>
+                        <img src="docs/adicao/adicao6.png"><br>
+                        <img src="docs/adicao/adicao7.png"><br>
+                        <img src="docs/adicao/adicao8.png"><br>
+                        <img src="docs/adicao/adicao9.png"><br>
+                        <img src="docs/adicao/adicao10.png"><br>
+                        <img src="docs/adicao/adicao11.png"><br>
+                        <img src="docs/adicao/adicao12.png"><br>
+                    </div>
                 </div>
                 
                 
