@@ -20,7 +20,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livros_1.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
 
@@ -54,7 +54,6 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
 <body>
 
 <!-- cabeçario com a logo, perfil, e nome da pagina  -->
-    <div id="locura">
     <header>
         <div class="cabecario">    
             <div><p id="pag_nom"> More Math </p></div>
@@ -127,7 +126,6 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
             </script>
     </div>
 <!-- Fim livros -->
-</div>
 <!-- Rodapé -->
     <footer>
         <a href="sobre_nos.php" id="bt_quem_somos"> <p id="texto_bt_quem_somos"> Sobre nós </p></a>
