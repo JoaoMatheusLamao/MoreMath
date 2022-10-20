@@ -61,7 +61,7 @@ body{
     text-align: center;
     margin-left: 18%;
     width: 60%;
-    height: 90%;
+    height: 100%;
     border-radius: 30px;
     border-color: rgb(255, 255, 255);
     border-width: 2px;
@@ -78,7 +78,7 @@ body{
 }
 
 .label_input label{
-    font-size: 110%;
+    font-size: 100%;
     color: rgb(255, 255, 255);
     font-weight: 200%;
 }   
