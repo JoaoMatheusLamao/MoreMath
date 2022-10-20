@@ -42,16 +42,20 @@ $conteudo = Conteudo::puxaCont($_SESSION['componente']);
                 visibilidade = 0
             }
         }
+
+        var i = setInterval(function () {
+        clearInterval(i);
+        document.getElementById("loading").style.display = "none";
+        document.getElementById("conteudo_pdf").style.display = "flex";
+        }, 1000);
     </script>
     <!-- Fim do menu lateral -->
 
 </head>
 
 <body>
-
     <main>
         <div class="conteudo">
-
             <div class="menu_lateral">
                 <div class="menu_lateral_andante">
                     <div class="menu" id="menu_visbilidade" style="display: none;">  <br>    
@@ -71,13 +75,21 @@ $conteudo = Conteudo::puxaCont($_SESSION['componente']);
 
             <div class="conteudos_bloco">
                 <div class="Corpo_conteudo">
-                    <iframe src="<?php echo $conteudo?>" id="corpo">
-                    </iframe>
+                    <div id="loading" style="display: flex"> <img src="css/img/loading.gif"> </div>
+                    <div id="conteudo_pdf" style="display: none">
+                        <img src="docs/divisao/divisao1.png"><br>
+                        <img src="docs/divisao/divisao2.png"><br>
+                        <img src="docs/divisao/divisao3.png"><br>
+                        <img src="docs/divisao/divisao4.png"><br>
+                        <img src="docs/divisao/divisao5.png"><br>
+                        <img src="docs/divisao/divisao6.png"><br>
+                        <img src="docs/divisao/divisao7.png"><br>
+                        <img src="docs/divisao/divisao8.png"><br>
+                        <img src="docs/divisao/divisao9.png"><br>
+                        <img src="docs/divisao/divisao10.png"><br>
+                    </div>
                 </div>
-                
-                
             </div>
-
             <div class="Div_bt_exercicios"> <a href="../exercicio/selectNivel.php" id="img_voltar"><img src="css/img/bt_exercicio.png" width="80%" id="img_bt_exercicio"></a><br></div>
         </div>
 

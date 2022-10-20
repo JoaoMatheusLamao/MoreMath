@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_Ap7.css">
+    <link rel="stylesheet" href="css/style_ex_ap.css">
 
     <title>Exercícios</title>
 </head>
@@ -51,7 +51,10 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 <form method="post">
                     <input type="submit" name="pulaEx" id="pulaEx" value="Próximo exercício">
                 </form>
-                <div class="bt_voltar_div"> <a href="selectNivel.php" class="bt_voltar_a"><img src="css/img/bt_volta.png" alt="menu"></a></div>  
+                <div class="grupo_voltar">
+                    <a href="selectNivel.php" id="lateral_bt_casa"><img src="css/img/bt_back.png"></a>
+                    <a href="../index.php"><img src="css/img/bt_casa.png" ></a>
+                </div> 
             </div>
         </div>
     </main>

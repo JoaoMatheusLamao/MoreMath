@@ -7,6 +7,11 @@
     <link rel="stylesheet" type="text/css "href="css/style_nos.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
     <title>Conteudos</title>
+    <style>
+        body{
+            overflow-x: hidden;
+        }
+    </style>
 </head>
 <body>
 <!--<div id="text"></div> -->

@@ -15,7 +15,7 @@ body{
     background-repeat: no-repeat;
     background-position-x: 52%;
     font-family: 'DynaPuff', cursive;
-    /*overflow: hidden;*/
+    overflow: hidden;
 }
 /* fim pré sets*/
 
@@ -143,6 +143,15 @@ a #soma, a #divisao, a #subtracao, a #multiplacao{
     text-decoration: underline 1px solid white;
 
 }
+
+#conteudo_pdf{
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    column-gap: 0%;
+}
+
+
 .Corpo_conteudo{
     display: flex;
     flex-direction: column;
@@ -155,6 +164,7 @@ a #soma, a #divisao, a #subtracao, a #multiplacao{
     height: 100%;  
     border: 3px solid black;
     border-bottom: none;
+    padding-top: 1%;
 }
 #corpo{
     margin-top: 1%;
