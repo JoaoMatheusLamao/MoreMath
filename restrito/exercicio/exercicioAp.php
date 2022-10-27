@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_ap5.css">
+    <link rel="stylesheet" href="css/style_ex_ap6.css">
 
     <title>Exercícios</title>
 </head>
@@ -41,7 +41,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                     <div class="form_resp">
                         <form id="formResposta" method="post">
                             <label for="inpResposta">R:</label>
-                            <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:">
+                            <input type="text" autocomplete="off" name="inpResposta" id="inpResposta" class="input" placeholder="Insira sua resposta:" required>
                             <input type="submit" value="Responder" id="btnEnvia" class="input">
                         </form>
                     </div>
@@ -49,13 +49,13 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 </div>
             </div>
             <div class="quadro_tentativa">
-                <div class="conta">
+                <div class="frase_tent">
                     <p id="tentativa_excedida">Acabaram suas tentativas para resolver esse exercício! Faça uma revisão desse conteúdo!</p>
                 </div>
             </div>
             <div class="trilho_tentativa">
                 <a href="../index.php" id="link">
-                <img id="voltaHome" src="css/img/bt_casa.png" >
+                <img id="voltaHome" src="css/img/house.png" >
                 </a>
             </div>
             <div class="trilho_inferior">
