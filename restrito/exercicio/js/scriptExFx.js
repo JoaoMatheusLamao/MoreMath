@@ -1,3 +1,5 @@
+var tentativa = 0;
+
 $('#formResposta').submit(function(e) {
     e.preventDefault();
 
@@ -15,8 +17,14 @@ $('#formResposta').submit(function(e) {
             var message = "Parabéns, você acertou!!!";
             $(".status").css("color", "green");
         } else {
-            var tentativa = tentativa + 1;
-            var message = "Ops, você errou!!!" + tentativa;
+            tentativa = tentativa + 1;
+            if(tentativa >= 3){
+                $(".quadro_tentativa").css("display", "flex");
+                $(".trilho_tentativa").css("display", "flex");
+                $(".quadro_conta").css("display", "none");
+                $(".trilho_inferior").css("display", "none");
+            }
+            var message = "Ops, você errou!!!";
             $(".status").css("color", "red");
         }
         $('.status').text(message);

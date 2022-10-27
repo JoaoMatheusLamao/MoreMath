@@ -140,11 +140,7 @@ main{
 }
 
 #voltaHome{
-    width: 40%;
-}
-#voltaHome:hover{
-    transform: scale(1.15);
-    transition: 2s;
+    width: 80%;
 }
 
 .grupo_voltar{
