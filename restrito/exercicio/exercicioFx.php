@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_fx1.css">
+    <link rel="stylesheet" href="css/style_ex_fx.css">
 
     <title>Exercícios</title>
 </head>
@@ -55,7 +55,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
             </div>
             <div class="trilho_tentativa">
                 <a href="../index.php" id="link">
-                <img id="voltaHome" src="css/img/bt_casa.png" >
+                <img id="voltaHome" src="css/img/house.png">
                 </a>
             </div>
             <div class="trilho_inferior">
@@ -71,7 +71,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExFx.js"></script>
+    <script src="js/scriptExFx1.js"></script>
 </body>
 
 </html>

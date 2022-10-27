@@ -104,6 +104,49 @@ main{
     border-radius: 25px;
 }
 
+.quadro_tentativa{
+    display: none;
+    background-color: #F6EFEF;
+    height: 50%;
+    width: 35%;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+}
+
+#tentativa_excedida{
+    font-size: 40pt;
+    font-family: 'Hepta Slab', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.trilho_tentativa{
+    display: none;
+    width: 100%;
+    border: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+#link{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#voltaHome{
+    width: 40%;
+}
+#voltaHome:hover{
+    transform: scale(1.15);
+    transition: 2s;
+}
+
 .grupo_voltar{
     background-color: rgb(188, 188, 188);
     width: 18%;

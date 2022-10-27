@@ -69,6 +69,6 @@ if (!$usuario->autenticar($_SESSION['token'])) {
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExAp.js"></script>
+    <script src="js/scriptExAp1.js"></script>
 </body>
 </html>
