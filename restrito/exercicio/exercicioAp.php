@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_ap1.css">
+    <link rel="stylesheet" href="css/style_ex_ap5.css">
 
     <title>Exercícios</title>
 </head>
@@ -35,6 +35,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
             <div class="quadro_conta">
                 <div class="conta">
                     <p id="paragrafo_enunciado"></p>
+                    <p id="resultado"></p>
                 </div>
                 <div class="trilho_teste">
                     <div class="form_resp">
@@ -69,6 +70,6 @@ if (!$usuario->autenticar($_SESSION['token'])) {
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExAp1.js"></script>
+    <script src="js/scriptExAp5.js"></script>
 </body>
 </html>
