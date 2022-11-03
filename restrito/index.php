@@ -22,7 +22,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css "href="css/style_livros_1.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
-    <title>Conteudos</title>
+    <title>Conteúdos</title>
 
     <!-- Javascript cabeçario botão -->
     <script language="javascript">

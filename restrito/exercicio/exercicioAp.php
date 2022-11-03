@@ -10,16 +10,18 @@ if (!$usuario->autenticar($_SESSION['token'])) {
 
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_ap6.css">
+    <link rel="stylesheet" href="css/style_ex_ap.css">
 
     <title>Exercícios</title>
 </head>
+
 <body>
     <main>
         <div class="trilho_titulo">
@@ -27,12 +29,16 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 <h1 id="titulo">Resolva</h1>
             </div>
             <div class="pontos">
-            <h1 id="pontos"></h1>
-            <img src="css/img/medalha.png">
+                <h1 id="pontos"></h1>
+                <img src="css/img/medalha.png">
             </div>
         </div>
         <div class="centro">
             <div class="quadro_conta">
+                <div class="tent">
+                    <p id="text_tent">Tentativas:</p>
+                    <p id="tentativas"></p>
+                </div>
                 <div class="conta">
                     <p id="paragrafo_enunciado"></p>
                     <p id="resultado"></p>
@@ -45,17 +51,19 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                             <input type="submit" value="Responder" id="btnEnvia" class="input">
                         </form>
                     </div>
-                    <span><p class="status"></p></span>
+                    <span>
+                        <p class="status"></p>
+                    </span>
                 </div>
             </div>
             <div class="quadro_tentativa">
                 <div class="frase_tent">
-                    <p id="tentativa_excedida">Acabaram suas tentativas para resolver esse exercício! Faça uma revisão desse conteúdo!</p>
+                    <p id="tentativa_excedida">Poxa, não foi dessa vez! Mas não fique triste, revise a matéria e tente novamente.</p>
                 </div>
             </div>
             <div class="trilho_tentativa">
                 <a href="../index.php" id="link">
-                <img id="voltaHome" src="css/img/house.png" >
+                    <img id="voltaHome" src="css/img/house.png">
                 </a>
             </div>
             <div class="trilho_inferior">
@@ -64,12 +72,13 @@ if (!$usuario->autenticar($_SESSION['token'])) {
                 </form>
                 <div class="grupo_voltar">
                     <a href="selectNivel.php" id="lateral_bt_casa"><img src="css/img/bt_back.png"></a>
-                    <a href="../index.php"><img src="css/img/bt_casa.png" ></a>
-                </div> 
+                    <a href="../index.php"><img src="css/img/bt_casa.png"></a>
+                </div>
             </div>
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExAp5.js"></script>
+    <script src="js/scriptExAp.js"></script>
 </body>
+
 </html>
