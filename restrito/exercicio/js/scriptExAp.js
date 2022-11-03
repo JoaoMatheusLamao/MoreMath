@@ -17,6 +17,7 @@ $('#formResposta').submit(function(e) {
             var message = "Parabéns, você acertou!!!";
             $("#resultado").text(u_resp).css("color", "green");
             $(".status").css("color", "green");
+            $(".form_resp").css("display", "none");
         } else {
             tentativa = tentativa - 1;
             $('#tentativas').text(tentativa);
@@ -49,6 +50,7 @@ $(document).ready(function(){
         method: 'POST',
         dataType: 'json'
     }).done(function(enunciado){
+        $('#tentativas').text(tentativa);
         $.ajax({
             url: 'http://localhost/restrito/exercicio/updatePontos.php',
             method: 'POST',

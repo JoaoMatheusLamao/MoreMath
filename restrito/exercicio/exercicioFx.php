@@ -16,7 +16,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_fx.css">
+    <link rel="stylesheet" href="css/style_ex_fx2.css">
 
     <title>Exercícios</title>
 </head>
@@ -34,6 +34,9 @@ if (!$usuario->autenticar($_SESSION['token'])) {
         </div>
         <div class="centro">
             <div class="quadro_conta">
+                <div class="tent">
+                    <p id="text_tent">Tentativas:</p><p id="tentativas"></p>
+                </div>
                 <div class="conta">
                     <p id="paragrafo_enunciado"></p>
                 </div>
@@ -50,7 +53,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
             </div>
             <div class="quadro_tentativa">
                 <div class="conta">
-                    <p id="tentativa_excedida">Acabaram suas tentativas para resolver esse exercício! Faça uma revisão desse conteúdo!</p>
+                    <p id="tentativa_excedida">Poxa, não foi dessa vez! Mas não fique triste, revise a matéria e tente novamente.</p>
                 </div>
             </div>
             <div class="trilho_tentativa">
@@ -71,7 +74,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
         </div>
     </main>
     <script src="../assets/js/jqueryImport.js"></script>
-    <script src="js/scriptExFx1.js"></script>
+    <script src="js/scriptExFx2.js"></script>
 </body>
 
 </html>

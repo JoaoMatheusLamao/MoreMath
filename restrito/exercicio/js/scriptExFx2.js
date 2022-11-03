@@ -12,11 +12,12 @@ $('#formResposta').submit(function(e) {
         dataType: 'json'
     }).done(function(result){
         $('#inpResposta').val('');
-        console.log(result);
         if(result == true){
             var message = "Parabéns, você acertou!!!";
-            $("#resultado").text(u_resp).css("color", "green");
+            $("#paragrafo_enunciado").append("<p id=resultado>"+u_resp+"</p>");
+            $("#resultado").css("color", "green");
             $(".status").css("color", "green");
+            $(".form_resp").css("display", "none");
         } else {
             tentativa = tentativa - 1;
             $('#tentativas').text(tentativa);
@@ -49,6 +50,7 @@ $(document).ready(function(){
         method: 'POST',
         dataType: 'json'
     }).done(function(enunciado){
+        $('#tentativas').text(tentativa);
         $.ajax({
             url: 'http://localhost/restrito/exercicio/updatePontos.php',
             method: 'POST',
@@ -59,7 +61,8 @@ $(document).ready(function(){
             $('#pontos').text(pontuacao);
         });
         if (enunciado !== "") {
-            $('#paragrafo_enunciado').text(enunciado);
+            var enunciadoCompleto = enunciado + "=";
+            $('#paragrafo_enunciado').text(enunciadoCompleto);
         } else {
             location.reload(true);
         }
