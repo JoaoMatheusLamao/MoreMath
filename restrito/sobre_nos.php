@@ -25,7 +25,7 @@
         <div class="bloco_de_texto">
             <p id="titulo_corpo">Quem somos</p>
             <hr><br>
-            <p id="texto"> O site moremath foi planejado e desenvolvido por um grupo de 04 estudantes do curso de Desenvolvimento de Sistemas, turma de 2020 - 2022, na ETEC MACHADO DE ASSIS, no ano de 2022.</p><br>
+            <p id="texto"> O site More Math foi planejado e desenvolvido por um grupo de 04 estudantes do curso de Desenvolvimento de Sistemas, turma de 2020 - 2022, na ETEC MACHADO DE ASSIS, no ano de 2022.</p><br>
             <p id="texto"> O tema do site foi decidido após uma série de pesquisas e reuniões. O projeto tem como foco auxiliar a aprendizagem da matemática básica, utilizando elementos da gamificação durante sua explanação.</p><br>
             <p id="texto"> Os alunos responsáveis pela criação do site são: </p><br>
                 <ul>
