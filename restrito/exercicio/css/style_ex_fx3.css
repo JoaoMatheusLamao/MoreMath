@@ -5,7 +5,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Sanchez:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Hepta+Slab&display=swap');
 
-
 *{
     margin: 0;
     padding: 0;
@@ -98,48 +97,12 @@ main{
 
 .quadro_conta{
     background-color: #F6EFEF;
-    min-height: 40%;
+    height: 50%;
     width: 35%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     border-radius: 25px;
 }
-
-.conta{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 3%;
-    margin-bottom: 5%;
-}
-
-.frase_tent{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 3%;
-    margin-bottom: 5%;
-}
-
-
-#resultado{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5%;
-    font-size: 350%;
-}
-
-.conta p{
-    font-size: 20pt;
-    font-family: 'Sanchez', serif;
-    text-align: justify;
-    width: 95%;
-}
-
 
 .quadro_tentativa{
     display: none;
@@ -184,10 +147,46 @@ main{
     transition: 2s;
 }
 
-.trilho_teste{
+.grupo_voltar{
+    background-color: rgb(188, 188, 188);
+    width: 15%;
+    height: 45%;
+    border: solid 2px black;
+    border-left: none;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+
+}
+.grupo_voltar a{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.grupo_voltar a img{
+    width: 40%;
+}
+#lateral_bt_casa{
+    margin-left: 8%;
+}
+
+
+.conta{
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conta p{
+    font-size: 70pt;
+    font-family: 'Hepta Slab', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 span{
@@ -197,10 +196,13 @@ span{
 }
 
 span p{
+    margin: 10px;
     font-size: x-large;
-    margin-bottom: 3%;
 }
 
+#imgInterrog{
+    margin-left: 15px;
+}
 .form_resp{
     height: 25%;
     display: flex;
@@ -208,7 +210,6 @@ span p{
     align-items: center;
     justify-content: center;
 }
-
 .tent{
     width: 100%;
     display: flex;
@@ -239,7 +240,6 @@ span p{
 .input{
     border-radius: 10px;
 }
-
 .trilho_inferior{
     width: 100%;
 }
@@ -259,30 +259,4 @@ span p{
     height: 4vh;
     margin-left: 1vw;
     background-color: #7b7f8a;
-}
-
-.grupo_voltar{
-    background-color: rgb(188, 188, 188);
-    width: 15%;
-    height: 45%;
-    border: solid 2px black;
-    border-left: none;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    display: flex;
-    flex-direction: row;
-
-}
-.grupo_voltar a{
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.grupo_voltar a img{
-    width: 40%;
-}
-#lateral_bt_casa{
-    margin-left: 8%;
 }

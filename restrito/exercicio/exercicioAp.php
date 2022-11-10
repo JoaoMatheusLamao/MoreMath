@@ -17,7 +17,7 @@ if (!$usuario->autenticar($_SESSION['token'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
 
-    <link rel="stylesheet" href="css/style_ex_ap.css">
+    <link rel="stylesheet" href="css/style_ex_ap2.css">
 
     <title>Exercícios</title>
 </head>
