@@ -20,9 +20,9 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css "href="css/style_livros_1.css">
+    <link rel="stylesheet" type="text/css "href="css/style_livros.css">
     <link rel="shortcut icon" href="css/img/Coruja.png" type="image/x-icon">
-    <title>Conteúdos</title>
+    <title>Conteudos</title>
 
     <!-- Javascript cabeçario botão -->
     <script language="javascript">
@@ -96,7 +96,7 @@ $errado = Estatistica::puxaEstat($_SESSION['id_usuario'], 0);
 
 <!-- livros  -->
     <div class="bloco_do_swiper">
-        <div class="swiper mySwiper">
+        <div class="swiper mySwiper" id="swiper-size">
             <div class="swiper-wrapper">
                 <div class="swiper-slide"><a href="conteudos/soma.php"><img src="css/img/livro_1.png" alt="link de conteudo para soma"></a></div>
                 <div class="swiper-slide"><a href="conteudos/subtracao.php"><img src="css/img/Livro_2.png" alt="link de conteudo para subtração"></a></div>
