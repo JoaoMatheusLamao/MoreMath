@@ -1,12 +1,5 @@
 # MoreMath
 
-Não se esqueçam de sempre criar uma nova branch para subir suas atualizações!!!!!
-
-Olha que coisa mais linda, mais cheia de graça. É ela menina que vem e que passa.
-Num doce balaço a caminho do mar...
-Moça do corpo dourado do Sol de Ipanema...
-
-
-Ratunamatata.....
-
-SEGURAAAAA PEAOOOO
+Trabalho de Conclusão de Curso - ETEC Machado de Assis
+Alunos: João Matheus A Lamão, Sâmara Cristina Miranda Antunes, Vitor Hugo Fernandes Campos e Kaique Vinicius Silva.
+Tema: A Gamificação aplicada ao ensino de matemática básica.
