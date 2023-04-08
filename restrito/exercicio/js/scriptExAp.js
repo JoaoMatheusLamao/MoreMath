@@ -6,7 +6,7 @@ $('#formResposta').submit(function(e) {
     var u_resp = $('#inpResposta').val();
     
     $.ajax({
-        url: 'http://localhost/restrito/exercicio/corrigeEx.php',
+        url: 'http://localhost/MoreMath/restrito/exercicio/corrigeEx.php',
         method: 'POST',
         data: {resposta: u_resp},
         dataType: 'json'
@@ -32,7 +32,7 @@ $('#formResposta').submit(function(e) {
         }
         $('.status').text(message);
         $.ajax({
-            url: 'http://localhost/restrito/exercicio/updatePontos.php',
+            url: 'http://localhost/MoreMath/restrito/exercicio/updatePontos.php',
             method: 'POST',
             dataType: 'json'
         }).done(function(pontos){
@@ -46,13 +46,13 @@ $('#formResposta').submit(function(e) {
 
 $(document).ready(function(){
 	$.ajax({
-        url: 'http://localhost/restrito/exercicio/selectEx.php',
+        url: 'http://localhost/MoreMath/restrito/exercicio/selectEx.php',
         method: 'POST',
         dataType: 'json'
     }).done(function(enunciado){
         $('#tentativas').text(tentativa);
         $.ajax({
-            url: 'http://localhost/restrito/exercicio/updatePontos.php',
+            url: 'http://localhost/MoreMath/restrito/exercicio/updatePontos.php',
             method: 'POST',
             dataType: 'json'
         }).done(function(pontos){
